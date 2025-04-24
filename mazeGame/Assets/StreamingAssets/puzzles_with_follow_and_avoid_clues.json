@@ -1,0 +1,1599 @@
+[
+  {
+    "id": 1,
+    "level": 1,
+    "difficulty": "Easy",
+    "question": "What did ancient Egyptians use to write?",
+    "options": ["Wood", "Papyrus", "Stones", "Leather"],
+    "correctAnswerIndex": 1,
+    "clue": "Cats were sacred in ancient Egypt, protectors of homes and symbols of grace.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 2,
+    "level": 1,
+    "difficulty": "Medium",
+    "question": "Which god was associated with wisdom?",
+    "options": ["Ra", "Thoth", "Horus", "Seth"],
+    "correctAnswerIndex": 1,
+    "clue": "Crows have long been seen as omens of misfortune in many cultures.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Crow"
+  },
+  {
+    "id": 3,
+    "level": 1,
+    "difficulty": "Hard",
+    "question": "What structure guarded the pyramids?",
+    "options": ["Scarab", "Obelisk", "Statue of Ra", "The Sphinx"],
+    "correctAnswerIndex": 3,
+    "clue": "The Lotus blooms from the mud, a sign of resurrection and purity.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 4,
+    "level": 2,
+    "difficulty": "Medium",
+    "question": "What was used to weigh the heart of the dead?",
+    "options": ["Scroll", "Feather of Ma'at", "Ankh", "Coin"],
+    "correctAnswerIndex": 1,
+    "clue": "The vulture circles where death lies... not a good sign.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Vulture"
+  },
+  {
+    "id": 5,
+    "level": 2,
+    "difficulty": "Easy",
+    "question": "Who was the sun god in ancient Egypt?",
+    "options": ["Thoth", "Ra", "Anubis", "Osiris"],
+    "correctAnswerIndex": 1,
+    "clue": "The Ankh is the key of life, a guiding symbol among the ancients.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 6,
+    "level": 2,
+    "difficulty": "Hard",
+    "question": "What did Egyptians believe the afterlife was called?",
+    "options": ["Underworld", "Field of Reeds", "Valley of Kings", "Abyss"],
+    "correctAnswerIndex": 1,
+    "clue": "A broken mirror brings seven years of bad luck — best steer clear.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 7,
+    "level": 2,
+    "difficulty": "Medium",
+    "question": "Which plant symbolized rebirth?",
+    "options": ["Palm", "Olive", "Lotus", "Papyrus"],
+    "correctAnswerIndex": 2,
+    "clue": "Scarab beetles symbolized rebirth and protection in tombs and temples.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 8,
+    "level": 2,
+    "difficulty": "Easy",
+    "question": "Which animal was sacred and lived in temples?",
+    "options": ["Dog", "Ox", "Hawk", "Cat"],
+    "correctAnswerIndex": 3,
+    "clue": "Red sand stains the path of the cursed...",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 9,
+    "level": 2,
+    "difficulty": "Hard",
+    "question": "Which god had a jackal head?",
+    "options": ["Anubis", "Ra", "Thoth", "Sobek"],
+    "correctAnswerIndex": 0,
+    "clue": "The Eye of Horus watches over, symbol of health and protection.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 10,
+    "level": 2,
+    "difficulty": "Medium",
+    "question": "Which river was essential to Egyptian civilization?",
+    "options": ["Amazon", "Tigris", "Nile", "Euphrates"],
+    "correctAnswerIndex": 2,
+    "clue": "Even the mightiest symbols, when broken, bring ruin.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 11,
+    "level": 3,
+    "difficulty": "Easy",
+    "question": "What did Egyptians often bury with the dead for protection?",
+    "options": ["Scroll", "Feather", "Scarab", "Coin"],
+    "correctAnswerIndex": 2,
+    "clue": "The beetle was believed to carry the sun across the sky, a sacred companion.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 12,
+    "level": 3,
+    "difficulty": "Hard",
+    "question": "Which symbol represents life in Egyptian mythology?",
+    "options": ["Flame", "Feather", "Ankh", "Eye"],
+    "correctAnswerIndex": 2,
+    "clue": "Cursed sand once turned red with blood — not all that glitters guides the way.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 13,
+    "level": 3,
+    "difficulty": "Medium",
+    "question": "Who was the goddess of fertility and love?",
+    "options": ["Isis", "Hathor", "Sekhmet", "Nephthys"],
+    "correctAnswerIndex": 1,
+    "clue": "Lotus flowers opened with the rising sun — a gentle blessing from the Nile.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 14,
+    "level": 3,
+    "difficulty": "Hard",
+    "question": "Which god had the head of a jackal?",
+    "options": ["Anubis", "Horus", "Ra", "Thoth"],
+    "correctAnswerIndex": 0,
+    "clue": "Where vultures gather, souls may be lost.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Vulture"
+  },
+  {
+    "id": 15,
+    "level": 3,
+    "difficulty": "Medium",
+    "question": "Which goddess protected the home and symbolized grace?",
+    "options": ["Bastet", "Isis", "Hathor", "Sekhmet"],
+    "correctAnswerIndex": 0,
+    "clue": "Where cats roamed freely, peace and safety followed.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 16,
+    "level": 3,
+    "difficulty": "Easy",
+    "question": "What was believed to happen in the afterlife?",
+    "options": ["Journey to stars", "Field of Reeds", "Underworld prison", "Judgement by Ra"],
+    "correctAnswerIndex": 1,
+    "clue": "A shattered monument can no longer protect — only warn.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 17,
+    "level": 3,
+    "difficulty": "Medium",
+    "question": "Which animal was associated with the god Horus?",
+    "options": ["Hawk", "Cat", "Crocodile", "Jackal"],
+    "correctAnswerIndex": 0,
+    "clue": "The Eye that never blinks sees what others cannot.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 18,
+    "level": 3,
+    "difficulty": "Hard",
+    "question": "Which symbol was feared if broken?",
+    "options": ["Mirror", "Scroll", "Obelisk", "Crown"],
+    "correctAnswerIndex": 0,
+    "clue": "Some say shards of glass reflect your misfortune — better not look too closely.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 19,
+    "level": 3,
+    "difficulty": "Medium",
+    "question": "What did the Pharaoh’s mask symbolize?",
+    "options": ["War", "Mystery", "Power", "Wealth"],
+    "correctAnswerIndex": 2,
+    "clue": "Golden visages led the way through darkness, guiding spirits beyond.",
+    "symbolAtCorrectPath": "Pharaoh Mask",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 20,
+    "level": 3,
+    "difficulty": "Easy",
+    "question": "What animal was considered unlucky in many ancient tales?",
+    "options": ["Crow", "Ox", "Cat", "Hawk"],
+    "correctAnswerIndex": 0,
+    "clue": "Dark wings circling in silence — a sure sign to turn back.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Crow"
+  },
+  {
+    "id": 21,
+    "level": 3,
+    "difficulty": "Hard",
+    "question": "Which of these was used in rituals for rebirth?",
+    "options": ["Sand", "Scarab", "Flame", "Oil"],
+    "correctAnswerIndex": 1,
+    "clue": "The sacred beetle was more than just an insect — it carried prayers.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  { 
+    "id": 22,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "Which god had a falcon head and was god of the sky?",
+    "options": ["Horus", "Anubis", "Thoth", "Seth"],
+    "correctAnswerIndex": 0,
+    "clue": "The Eye that watches without sleep guided many across the sands.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 23,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "What flower was a symbol of rebirth in ancient Egypt?",
+    "options": ["Palm", "Lotus", "Olive", "Papyrus"],
+    "correctAnswerIndex": 1,
+    "clue": "The bloom that rises with the sun is never ignored.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 24,
+    "level": 4,
+    "difficulty": "Medium",
+    "question": "What god was responsible for mummification and the afterlife?",
+    "options": ["Thoth", "Anubis", "Ra", "Osiris"],
+    "correctAnswerIndex": 1,
+    "clue": "They say the broken monuments are warnings from the past.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 25,
+    "level": 4,
+    "difficulty": "Hard",
+    "question": "What was the name of the paradise in the afterlife?",
+    "options": ["Pyramid World", "Valley of Kings", "Field of Reeds", "Sands of Truth"],
+    "correctAnswerIndex": 2,
+    "clue": "Among the fields where calm winds blow, the righteous may rest.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 26,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "Which animal did Egyptians consider sacred and graceful?",
+    "options": ["Ox", "Cat", "Dog", "Falcon"],
+    "correctAnswerIndex": 1,
+    "clue": "Graceful paws guarded many homes — danger rarely entered where they walked.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 27,
+    "level": 4,
+    "difficulty": "Medium",
+    "question": "Which material was used for recording knowledge in scrolls?",
+    "options": ["Papyrus", "Gold", "Wood", "Stone"],
+    "correctAnswerIndex": 0,
+    "clue": "Crows feasted on the forgotten — their presence never meant good news.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Crow"
+  },
+  {
+    "id": 28,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "Which symbol was seen as a key of life?",
+    "options": ["Circle", "Flame", "Feather", "Ankh"],
+    "correctAnswerIndex": 3,
+    "clue": "This symbol opened doors to both the living and the dead.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 29,
+    "level": 4,
+    "difficulty": "Medium",
+    "question": "Which plant was linked to knowledge and rebirth?",
+    "options": ["Papyrus", "Olive", "Cedar", "Palm"],
+    "correctAnswerIndex": 0,
+    "clue": "Where the sand runs red, few truths survive.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 30,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "What protected tombs in the form of a statue?",
+    "options": ["Obelisk", "Hawk", "The Sphinx", "Lion"],
+    "correctAnswerIndex": 2,
+    "clue": "The great stone guardian watched without blinking, standing where others fell.",
+    "symbolAtCorrectPath": "Sphinx",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 31,
+    "level": 4,
+    "difficulty": "Hard",
+    "question": "Which goddess was often shown with a throne on her head?",
+    "options": ["Nephthys", "Hathor", "Isis", "Bastet"],
+    "correctAnswerIndex": 2,
+    "clue": "Where the mirror lies shattered, reflections twist the truth.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 32,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "What did Egyptians associate with rebirth and the rising sun?",
+    "options": ["Scarab", "Feather", "Scroll", "Snake"],
+    "correctAnswerIndex": 0,
+    "clue": "Tiny and crawling, yet powerful enough to move the sun.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 33,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "What river was the lifeblood of Egyptian civilization?",
+    "options": ["Nile", "Amazon", "Tigris", "Euphrates"],
+    "correctAnswerIndex": 0,
+    "clue": "It flowed calmly through eternity, feeding both crops and legends.",
+    "symbolAtCorrectPath": "Pharaoh Mask",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 34,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "Which goddess had the head of a lioness?",
+    "options": ["Sekhmet", "Isis", "Nephthys", "Ma’at"],
+    "correctAnswerIndex": 0,
+    "clue": "The sun’s fury walked beside her — but danger avoided her path.",
+    "symbolAtCorrectPath": "Cobra",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 35,
+    "level": 4,
+    "difficulty": "Medium",
+    "question": "Which item symbolized truth and justice?",
+    "options": ["Scepter", "Feather of Ma’at", "Throne", "Crown"],
+    "correctAnswerIndex": 1,
+    "clue": "Where vultures rest, fairness rarely follows.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Vulture"
+  },
+  {
+    "id": 36,
+    "level": 4,
+    "difficulty": "Easy",
+    "question": "Which symbol stood for eternity and unity?",
+    "options": ["Circle", "Infinity Knot", "Ankh", "Papyrus"],
+    "correctAnswerIndex": 0,
+    "clue": "No beginning, no end — a path walked by the ancients.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  }, 
+  {
+    "id": 37,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which plant was commonly used in writing materials?",
+    "options": ["Papyrus", "Olive", "Lotus", "Palm"],
+    "correctAnswerIndex": 0,
+    "clue": "Where ink meets wisdom, the plant grows tall and thin.",
+    "symbolAtCorrectPath": "Papyrus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 38,
+    "level": 5,
+    "difficulty": "Medium",
+    "question": "Which symbol represented eternal life?",
+    "options": ["Ankh", "Feather", "Cobra", "Sun"],
+    "correctAnswerIndex": 0,
+    "clue": "The symbol was carried in every tomb, marking the promise of return.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 39,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which animal was mummified and kept in temples?",
+    "options": ["Hawk", "Cat", "Crocodile", "Dog"],
+    "correctAnswerIndex": 1,
+    "clue": "Graceful and worshipped, their eyes saw the unseen.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 40,
+    "level": 5,
+    "difficulty": "Hard",
+    "question": "Which goddess wore a throne as her crown?",
+    "options": ["Isis", "Ma’at", "Bastet", "Nephthys"],
+    "correctAnswerIndex": 0,
+    "clue": "The shattered crown lies beside her story.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 41,
+    "level": 5,
+    "difficulty": "Medium",
+    "question": "Which symbol was linked to royal power and guidance?",
+    "options": ["Feather", "Sphinx", "Pharaoh Mask", "Sun Disk"],
+    "correctAnswerIndex": 2,
+    "clue": "Golden and still, it led the way through shadow.",
+    "symbolAtCorrectPath": "Pharaoh Mask",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 42,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "What insect symbolized rebirth in Egypt?",
+    "options": ["Fly", "Scarab", "Bee", "Spider"],
+    "correctAnswerIndex": 1,
+    "clue": "Rolling through sand, it carried hopes into the next life.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 43,
+    "level": 5,
+    "difficulty": "Medium",
+    "question": "What was the role of the god Thoth?",
+    "options": ["War", "Writing", "Farming", "Death"],
+    "correctAnswerIndex": 1,
+    "clue": "Among the red sands, even words may lose their meaning.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 44,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which river fed Egyptian lands?",
+    "options": ["Nile", "Tigris", "Euphrates", "Amazon"],
+    "correctAnswerIndex": 0,
+    "clue": "It flowed through temples and tombs alike.",
+    "symbolAtCorrectPath": "Cobra",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 45,
+    "level": 5,
+    "difficulty": "Hard",
+    "question": "Which goddess was twin sister to Isis?",
+    "options": ["Nephthys", "Hathor", "Sekhmet", "Ma’at"],
+    "correctAnswerIndex": 0,
+    "clue": "The shadows speak where wings gather in silence.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Vulture"
+  },
+  {
+    "id": 46,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which object was placed over the chest during mummification?",
+    "options": ["Crown", "Feather", "Scarab", "Coin"],
+    "correctAnswerIndex": 2,
+    "clue": "The small, carved protector rested over the heart.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 47,
+    "level": 5,
+    "difficulty": "Medium",
+    "question": "Which goddess was known for protection and home?",
+    "options": ["Bastet", "Isis", "Hathor", "Sekhmet"],
+    "correctAnswerIndex": 0,
+    "clue": "She walked quietly but fiercely — her presence calmed chaos.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 48,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which symbol was painted on walls for protection?",
+    "options": ["Horus Eye", "Ankh", "Scarab", "Feather"],
+    "correctAnswerIndex": 0,
+    "clue": "It stared back at intruders, daring them to approach.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 49,
+    "level": 5,
+    "difficulty": "Hard",
+    "question": "Which being was believed to consume the wicked after judgment?",
+    "options": ["Apep", "Ammit", "Bastet", "Sphinx"],
+    "correctAnswerIndex": 1,
+    "clue": "When the mirror breaks, your fate may be sealed.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 50,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which tool weighed the heart against a feather?",
+    "options": ["Balance", "Scroll", "Ankh", "Scepter"],
+    "correctAnswerIndex": 0,
+    "clue": "Truth and sin were measured — balance always told the truth.",
+    "symbolAtCorrectPath": "Feather of Ma'at",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 51,
+    "level": 5,
+    "difficulty": "Medium",
+    "question": "What was often seen alongside tomb entrances?",
+    "options": ["Statues", "Scrolls", "Snakes", "Red Sand"],
+    "correctAnswerIndex": 0,
+    "clue": "A pair stood guard, silent and eternal.",
+    "symbolAtCorrectPath": "Pharaoh Mask",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 52,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which animal was considered a divine protector?",
+    "options": ["Crocodile", "Dog", "Cat", "Jackal"],
+    "correctAnswerIndex": 2,
+    "clue": "A soft meow in the temple meant peace was near.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 53,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "What did Egyptians often carry as amulets?",
+    "options": ["Ankh", "Scepter", "Coin", "Scroll"],
+    "correctAnswerIndex": 0,
+    "clue": "Small and powerful, it sat close to the heart.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 54,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which statue had the body of a lion and head of a man?",
+    "options": ["Obelisk", "Sphinx", "Scarab", "Pharaoh"],
+    "correctAnswerIndex": 1,
+    "clue": "He laid in the sand for centuries, unmoving but not forgotten.",
+    "symbolAtCorrectPath": "Sphinx",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 55,
+    "level": 5,
+    "difficulty": "Medium",
+    "question": "Which symbol was feared if cracked or altered?",
+    "options": ["Scarab", "Mirror", "Ankh", "Obelisk"],
+    "correctAnswerIndex": 3,
+    "clue": "When mighty stones fall, misfortune often rises.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 56,
+    "level": 5,
+    "difficulty": "Easy",
+    "question": "Which god sailed the sun across the sky each day?",
+    "options": ["Ra", "Osiris", "Thoth", "Amun"],
+    "correctAnswerIndex": 0,
+    "clue": "Every morning, his journey began again — bringing light.",
+    "symbolAtCorrectPath": "Sun Disk",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 57,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "Which god was often represented with a sun disk above his head?",
+    "options": ["Ra", "Thoth", "Anubis", "Seth"],
+    "correctAnswerIndex": 0,
+    "clue": "His light reached every corner of Egypt — his disk never dimmed.",
+    "symbolAtCorrectPath": "Sun Disk",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 58,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "Which item symbolized the concept of truth and balance?",
+    "options": ["Crown", "Feather of Ma’at", "Staff", "Papyrus"],
+    "correctAnswerIndex": 1,
+    "clue": "Only those whose hearts matched its weight could pass on.",
+    "symbolAtCorrectPath": "Feather of Ma’at",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 59,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "Which structure had inscriptions and pointed tops?",
+    "options": ["Obelisk", "Pyramid", "Temple", "Scroll"],
+    "correctAnswerIndex": 0,
+    "clue": "These reached skyward like fingers of stone, telling stories of gods.",
+    "symbolAtCorrectPath": "Obelisk",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 60,
+    "level": 6,
+    "difficulty": "Hard",
+    "question": "Which being was believed to devour the unworthy souls?",
+    "options": ["Sphinx", "Apep", "Ammit", "Hathor"],
+    "correctAnswerIndex": 2,
+    "clue": "A shattered mirror is said to mark where she walks.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 61,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "Which goddess had the head of a lioness and was linked to war?",
+    "options": ["Sekhmet", "Bastet", "Isis", "Nephthys"],
+    "correctAnswerIndex": 0,
+    "clue": "Her roar echoed with power — yet her path was sacred.",
+    "symbolAtCorrectPath": "Cobra",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 62,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "Which river ran through ancient Egypt?",
+    "options": ["Amazon", "Nile", "Euphrates", "Tigris"],
+    "correctAnswerIndex": 1,
+    "clue": "Even the mightiest river avoids the cursed sands.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 63,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "What did Egyptians place on their chest during burial?",
+    "options": ["Coin", "Scroll", "Scarab", "Scepter"],
+    "correctAnswerIndex": 2,
+    "clue": "This little creature had the heart’s trust and the gods’ favor.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 64,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "What animal did Anubis resemble?",
+    "options": ["Jackal", "Lion", "Ox", "Hawk"],
+    "correctAnswerIndex": 0,
+    "clue": "Where dark feathers fall, the dead may never rest.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Crow"
+  },
+  {
+    "id": 65,
+    "level": 6,
+    "difficulty": "Hard",
+    "question": "Which goddess helped resurrect Osiris?",
+    "options": ["Hathor", "Isis", "Sekhmet", "Ma’at"],
+    "correctAnswerIndex": 1,
+    "clue": "The ruins near her shrine cracked under misused power.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 66,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "What does the Eye of Horus symbolize?",
+    "options": ["Destruction", "Power", "Healing", "Chaos"],
+    "correctAnswerIndex": 2,
+    "clue": "It watched over pharaohs, bringing protection and health.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 67,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "Which item was often carried for luck?",
+    "options": ["Scarab", "Feather", "Cobra", "Scepter"],
+    "correctAnswerIndex": 0,
+    "clue": "It crawled in pockets, but not with fear.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 68,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "Which god recorded the judgments of the dead?",
+    "options": ["Ra", "Thoth", "Seth", "Osiris"],
+    "correctAnswerIndex": 1,
+    "clue": "No lies escaped his ink — and none hid beneath his wing.",
+    "symbolAtCorrectPath": "Pharaoh Mask",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 69,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "What creature guided souls through the underworld?",
+    "options": [
+      "Scarab",
+      "Anubis",
+      "Horus",
+      "Isis"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "He had the head of a jackal and walked with the dead.",
+    "symbolAtCorrectPath": "Anubis",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 70,
+    "level": 6,
+    "difficulty": "Hard",
+    "question": "What was believed to protect the pharaoh in battle?",
+    "options": [
+      "Scroll",
+      "Cobra",
+      "Sphinx",
+      "Mirror"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "A sudden strike from its hood meant divine intervention.",
+    "symbolAtCorrectPath": "Cobra",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 71,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "What represented protection, royal power, and good health?",
+    "options": [
+      "Horus Eye",
+      "Scarab",
+      "Sun Disk",
+      "Feather"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "This eye could see what others feared to face.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 72,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "What was placed in tombs to help in the afterlife?",
+    "options": [
+      "Statue",
+      "Feather",
+      "Scroll",
+      "Scarab"
+    ],
+    "correctAnswerIndex": 3,
+    "clue": "Buried with royalty, this small token promised rebirth.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 73,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "What flower symbolized rebirth?",
+    "options": [
+      "Lotus",
+      "Olive",
+      "Palm",
+      "Papyrus"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "This flower opened with the sun and rested with the moon.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 74,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "Which symbol was often drawn on coffins?",
+    "options": [
+      "Scarab",
+      "Ankh",
+      "Feather",
+      "Cobra"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "This looped cross was a gateway to forever.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 75,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "What animal was feared and respected, linked to kingship?",
+    "options": [
+      "Cobra",
+      "Vulture",
+      "Cat",
+      "Jackal"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Coiled at the crown, its hiss silenced many.",
+    "symbolAtCorrectPath": "Cobra",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 76,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "Which goddess was mother to Horus?",
+    "options": [
+      "Isis",
+      "Bastet",
+      "Ma’at",
+      "Hathor"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "She pieced her husband back together with divine care.",
+    "symbolAtCorrectPath": "Isis",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 77,
+    "level": 6,
+    "difficulty": "Hard",
+    "question": "What symbol marked cursed paths in tomb legends?",
+    "options": [
+      "Crow",
+      "Red Sand",
+      "Broken Mirror",
+      "Snake"
+    ],
+    "correctAnswerIndex": 2,
+    "clue": "Reflections twisted and broke, marking places to avoid.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 78,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "Which symbol was said to ward off evil spirits?",
+    "options": [
+      "Scarab",
+      "Eye of Horus",
+      "Cobra",
+      "Scepter"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "Its gaze followed all who entered — unwelcome or not.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 79,
+    "level": 6,
+    "difficulty": "Medium",
+    "question": "What insect was rolled into amulets for royalty?",
+    "options": [
+      "Scarab",
+      "Bee",
+      "Spider",
+      "Fly"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "A small crawling hope — not to be crushed.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 80,
+    "level": 6,
+    "difficulty": "Easy",
+    "question": "What animal represented protection and mystery?",
+    "options": [
+      "Cat",
+      "Ox",
+      "Dog",
+      "Hawk"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Soft-footed and alert, it guarded the shadows.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 81,
+    "level": 6,
+    "difficulty": "Hard",
+    "question": "Which symbol, if seen cracked, was a terrible omen?",
+    "options": [
+      "Cobra",
+      "Obelisk",
+      "Scarab",
+      "Ankh"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "Even stone whispers warnings when broken.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 82,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which goddess was known for healing and motherhood?",
+    "options": [
+      "Hathor",
+      "Isis",
+      "Ma’at",
+      "Sekhmet"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "She rebuilt what was broken — a name whispered with reverence.",
+    "symbolAtCorrectPath": "Isis",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 83,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "What symbol did Egyptians use to represent protection?",
+    "options": [
+      "Horus Eye",
+      "Scarab",
+      "Cobra",
+      "Feather"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Painted on walls and jewelry, its gaze kept evil at bay.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 84,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "What animal symbolized grace and divine guardianship?",
+    "options": [
+      "Dog",
+      "Cat",
+      "Hawk",
+      "Lion"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "They walked between worlds, silent and sacred.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 85,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which symbol was believed to represent eternal life?",
+    "options": [
+      "Ankh",
+      "Obelisk",
+      "Mirror",
+      "Feather"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "This looped cross hung around the necks of kings and spirits.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 86,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which insect was seen as a protector in the afterlife?",
+    "options": [
+      "Fly",
+      "Scarab",
+      "Bee",
+      "Ant"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "Rolling the sun and guarding the soul, it crawled with purpose.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 87,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which goddess was known to bring destruction and plague?",
+    "options": [
+      "Sekhmet",
+      "Isis",
+      "Nephthys",
+      "Hathor"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Crimson sands often whispered her name in fear.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 88,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which symbol would likely be found broken after a betrayal?",
+    "options": [
+      "Obelisk",
+      "Scarab",
+      "Sun Disk",
+      "Feather"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It once stood tall but shattered when truth was denied.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 89,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which goddess was associated with joy, music, and motherhood?",
+    "options": [
+      "Hathor",
+      "Sekhmet",
+      "Ma’at",
+      "Isis"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "When her name was sung, the Nile danced.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 90,
+    "level": 7,
+    "difficulty": "Hard",
+    "question": "Which omen was feared above tomb entrances?",
+    "options": [
+      "Crow",
+      "Sphinx",
+      "Feather",
+      "Papyrus"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Its wings beat like war drums, never a welcome sound.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Crow"
+  },
+  {
+    "id": 91,
+    "level": 7,
+    "difficulty": "Hard",
+    "question": "Which god was linked to chaos and deserts?",
+    "options": [
+      "Seth",
+      "Ra",
+      "Anubis",
+      "Thoth"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Where mirrors shatter and truth distorts, he waits.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 92,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which river was the heart of Egyptian agriculture?",
+    "options": [
+      "Nile",
+      "Amazon",
+      "Tigris",
+      "Jordan"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It whispered through temples, feeding both gods and crops.",
+    "symbolAtCorrectPath": "Nile",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 93,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which object was used to weigh the heart against truth?",
+    "options": [
+      "Scarab",
+      "Feather of Ma’at",
+      "Ankh",
+      "Coin"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "So light, yet so powerful — it judged all souls equally.",
+    "symbolAtCorrectPath": "Feather of Ma’at",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 94,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which bird was seen as an omen of death?",
+    "options": [
+      "Vulture",
+      "Ibis",
+      "Swan",
+      "Falcon"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "They circled the dying like whispers from the grave.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Vulture"
+  },
+  {
+    "id": 95,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which structure was a gateway between earth and sky?",
+    "options": [
+      "Pyramid",
+      "Temple",
+      "Obelisk",
+      "Sphinx"
+    ],
+    "correctAnswerIndex": 2,
+    "clue": "When cracked, it meant the balance of the heavens was broken.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 96,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which flower was closely linked to sunrise and rebirth?",
+    "options": [
+      "Lotus",
+      "Olive",
+      "Papyrus",
+      "Palm"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It opened with the sun and closed with the moon.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 97,
+    "level": 7,
+    "difficulty": "Hard",
+    "question": "Which curse was feared when disturbing tombs?",
+    "options": [
+      "Broken Mirror",
+      "Feather",
+      "Red Sand",
+      "Jackal"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "No reflection remains where spirits wander in anger.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 98,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "What was often buried with pharaohs to protect them?",
+    "options": [
+      "Scarab",
+      "Scepter",
+      "Coin",
+      "Scroll"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Though small, it carried strength far beyond the grave.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 99,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which symbol marked dangerous terrain in ancient myths?",
+    "options": [
+      "Red Sand",
+      "Feather",
+      "Sun Disk",
+      "Papyrus"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Many returned from the desert... but none from here.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 100,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which goddess was often linked to fertility and home?",
+    "options": [
+      "Bastet",
+      "Hathor",
+      "Isis",
+      "Sekhmet"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Where her feline form appeared, blessings followed.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 101,
+    "level": 7,
+    "difficulty": "Hard",
+    "question": "Which animal symbolized bad omens in desert folklore?",
+    "options": [
+      "Crow",
+      "Jackal",
+      "Cat",
+      "Ox"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It croaked before death, perched high above misfortune.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Crow"
+  },
+  {
+    "id": 102,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which symbol was believed to connect the heavens and earth?",
+    "options": [
+      "Obelisk",
+      "Scarab",
+      "Ankh",
+      "Crown"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It pierced the sky like a frozen prayer.",
+    "symbolAtCorrectPath": "Obelisk",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 103,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which animal was sacred to Bastet?",
+    "options": [
+      "Cat",
+      "Jackal",
+      "Dog",
+      "Ox"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It moved in silence, watching all from the shadows.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 104,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which symbol did pharaohs wear to show divine authority?",
+    "options": [
+      "Cobra",
+      "Scarab",
+      "Feather",
+      "Mirror"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It hissed from the crowns of kings, coiled with power.",
+    "symbolAtCorrectPath": "Cobra",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 105,
+    "level": 7,
+    "difficulty": "Hard",
+    "question": "Which symbol, when cracked, was feared to bring bad fate?",
+    "options": [
+      "Cracked Obelisk",
+      "Scarab",
+      "Lotus",
+      "Sun Disk"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "A monument once whole, now only warns the lost.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 106,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "Which goddess is shown with a throne on her head?",
+    "options": [
+      "Isis",
+      "Ma’at",
+      "Hathor",
+      "Sekhmet"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "The throne did not command her, she commanded it.",
+    "symbolAtCorrectPath": "Isis",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 107,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which flower symbolized purity and new beginnings?",
+    "options": [
+      "Lotus",
+      "Olive",
+      "Papyrus",
+      "Palm"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It bloomed from the depths and stretched toward the sun.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 108,
+    "level": 7,
+    "difficulty": "Hard",
+    "question": "Which creature was thought to swallow the wicked?",
+    "options": [
+      "Ammit",
+      "Cobra",
+      "Crow",
+      "Anubis"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "She waited near the scales, jaws ready for sin.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 109,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "Which symbol did Egyptians paint for good luck?",
+    "options": [
+      "Scarab",
+      "Cobra",
+      "Feather",
+      "Jackal"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "A small beetle, but mighty enough to carry the sun.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 110,
+    "level": 7,
+    "difficulty": "Medium",
+    "question": "What represented truth and cosmic order?",
+    "options": [
+      "Feather of Ma’at",
+      "Eye of Horus",
+      "Ankh",
+      "Scepter"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It was lighter than guilt, yet heavier than lies.",
+    "symbolAtCorrectPath": "Feather of Ma’at",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 111,
+    "level": 7,
+    "difficulty": "Easy",
+    "question": "What statue guarded the Giza Plateau?",
+    "options": [
+      "Scarab",
+      "Sphinx",
+      "Pharaoh",
+      "Temple Lion"
+    ],
+    "correctAnswerIndex": 1,
+    "clue": "With the body of a lion and mind of a king, it watches still.",
+    "symbolAtCorrectPath": "Sphinx",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 112,
+    "level": 8,
+    "difficulty": "Easy",
+    "question": "Which symbol was worn as a charm for protection?",
+    "options": [
+      "Horus Eye",
+      "Coin",
+      "Feather",
+      "Jackal"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It watched without blinking, guarding those who wore it.",
+    "symbolAtCorrectPath": "Horus Eye",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 113,
+    "level": 8,
+    "difficulty": "Easy",
+    "question": "Which flower was sacred and linked to the sun?",
+    "options": [
+      "Lotus",
+      "Palm",
+      "Papyrus",
+      "Rose"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It rose from the muddy waters and followed the light.",
+    "symbolAtCorrectPath": "Lotus",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 114,
+    "level": 8,
+    "difficulty": "Medium",
+    "question": "Which sign marked areas believed to be cursed?",
+    "options": [
+      "Red Sand",
+      "Feather",
+      "Cobra",
+      "Sun Disk"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "The grains ran like blood beneath cursed feet.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Red Sand"
+  },
+  {
+    "id": 115,
+    "level": 8,
+    "difficulty": "Easy",
+    "question": "Which insect represented rebirth?",
+    "options": [
+      "Scarab",
+      "Ant",
+      "Bee",
+      "Spider"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It rolled light across the dunes, small but mighty.",
+    "symbolAtCorrectPath": "Scarab",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 116,
+    "level": 8,
+    "difficulty": "Hard",
+    "question": "What was feared to bring misfortune if shattered?",
+    "options": [
+      "Broken Mirror",
+      "Ankh",
+      "Obelisk",
+      "Scroll"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "What once showed the truth now distorts it forever.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Broken Mirror"
+  },
+  {
+    "id": 117,
+    "level": 8,
+    "difficulty": "Medium",
+    "question": "Which goddess was associated with protection and motherhood?",
+    "options": [
+      "Isis",
+      "Hathor",
+      "Bastet",
+      "Sekhmet"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "She raised kings and healed the broken with divine grace.",
+    "symbolAtCorrectPath": "Isis",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 118,
+    "level": 8,
+    "difficulty": "Easy",
+    "question": "Which animal was sacred and lived in temples?",
+    "options": [
+      "Cat",
+      "Hawk",
+      "Ox",
+      "Crocodile"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Its purr echoed softly through ancient shrines.",
+    "symbolAtCorrectPath": "Cat",
+    "symbolAtWrongPath": "nothing"
+  },
+  {
+    "id": 119,
+    "level": 8,
+    "difficulty": "Medium",
+    "question": "Which creature was feared for its association with death?",
+    "options": [
+      "Vulture",
+      "Cobra",
+      "Dog",
+      "Ram"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It circled above still bodies, drawn to endings.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Vulture"
+  },
+  {
+    "id": 120,
+    "level": 8,
+    "difficulty": "Hard",
+    "question": "Which cracked symbol was seen as a warning from the gods?",
+    "options": [
+      "Cracked Obelisk",
+      "Broken Ankh",
+      "Scarab Shell",
+      "Feather of Ma’at"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "Once upright and proud, now fractured by betrayal.",
+    "symbolAtCorrectPath": "nothing",
+    "symbolAtWrongPath": "Cracked Obelisk"
+  },
+  {
+    "id": 121,
+    "level": 8,
+    "difficulty": "Easy",
+    "question": "Which symbol represented the breath of life?",
+    "options": [
+      "Ankh",
+      "Scroll",
+      "Scepter",
+      "Crown"
+    ],
+    "correctAnswerIndex": 0,
+    "clue": "It dangled from the gods’ hands like a promise.",
+    "symbolAtCorrectPath": "Ankh",
+    "symbolAtWrongPath": "nothing"
+  }
+]
+
