@@ -1,0 +1,66 @@
+[
+  {
+    "level": 1,
+    "timeLimitSeconds": 90,
+    "puzzlesCount": 3,
+    "reward": "GoldenStatue_Ra",
+    "clueTeller": "Cleopatra",
+    "mazePrefab": "Maze_Level_1"
+  },
+  {
+    "level": 2,
+    "timeLimitSeconds": 120,
+    "puzzlesCount": 7,
+    "reward": "TreasureChest_Yellow",
+    "clueTeller": "Ra Priest",
+    "mazePrefab": "Maze_Level_2"
+  },
+  {
+    "level": 3,
+    "timeLimitSeconds": 150,
+    "puzzlesCount": 11,
+    "reward": "TreasureChest_Blue",
+    "clueTeller": "Isis Spirit",
+    "mazePrefab": "Maze_Level_3"
+  },
+  {
+    "level": 4,
+    "timeLimitSeconds": 180,
+    "puzzlesCount": 15,
+    "reward": "EmeraldIdol",
+    "clueTeller": "Sphinx Messenger",
+    "mazePrefab": "Maze_Level_4"
+  },
+  {
+    "level": 5,
+    "timeLimitSeconds": 210,
+    "puzzlesCount": 20,
+    "reward": "PharaohMask",
+    "clueTeller": "Anubis Guide",
+    "mazePrefab": "Maze_Level_5"
+  },
+  {
+    "level": 6,
+    "timeLimitSeconds": 240,
+    "puzzlesCount": 25,
+    "reward": "GoldenCat",
+    "clueTeller": "Hathor Oracle",
+    "mazePrefab": "Maze_Level_6"
+  },
+  {
+    "level": 7,
+    "timeLimitSeconds": 270,
+    "puzzlesCount": 30,
+    "reward": "EyeOfHorusGem",
+    "clueTeller": "Bastet Whisperer",
+    "mazePrefab": "Maze_Level_7"
+  },
+  {
+    "level": 8,
+    "timeLimitSeconds": 300,
+    "puzzlesCount": 10,
+    "reward": "SacredLotusTrophy",
+    "clueTeller": "Osiris Vision",
+    "mazePrefab": "Maze_Level_8"
+  }
+]
