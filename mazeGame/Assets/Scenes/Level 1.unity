@@ -3259,45 +3259,8 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -5609321221556402741, guid: 3261359d7eff7de49aa5f16af3b6a2ba, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1057367482}
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 9199261849990390558, guid: 3261359d7eff7de49aa5f16af3b6a2ba, type: 3}
---- !u!1 &1057367481
-GameObject:
-  m_ObjectHideFlags: 8
-  m_CorrespondingSourceObject: {fileID: -5609321221556402741, guid: 3261359d7eff7de49aa5f16af3b6a2ba, type: 3}
-  m_PrefabInstance: {fileID: 1057367480}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1057367482}
-  m_Layer: 0
-  m_Name: 'crow_fly (Missing Prefab with guid: 3261359d7eff7de49aa5f16af3b6a2ba)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1057367482
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057367481}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e12eb0146a583c140af2994e2bef16ce, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1070871545
 PrefabInstance:
   m_ObjectHideFlags: 0
