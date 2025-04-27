@@ -4026,10 +4026,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -5609321221556402741, guid: 3261359d7eff7de49aa5f16af3b6a2ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 9199261849990390558, guid: 3261359d7eff7de49aa5f16af3b6a2ba, type: 3}
 --- !u!1001 &1070871545
 PrefabInstance:
@@ -7210,7 +7207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8b5da5c71f8ee4b87aa2bef188299409, type: 2}
+  - {fileID: 2100000, guid: fa542ab47cc7bb3418c35926f8cab963, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
