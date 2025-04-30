@@ -11,7 +11,7 @@ public class PlayerRotation : MonoBehaviour
 
         yRotation += mouseX;
 
-        // дбЁ «бб«Џ» дЁ”е нгнд ж‘г«б
+        // пњљпњљпњљ пњљпњљпњљпњљпњљпњљ пњљпњљпњљпњљ пњљпњљпњљпњљ пњљпњљпњљпњљпњљ
         transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
     }
 }
