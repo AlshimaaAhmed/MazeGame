@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TreasureRoomScene.unity
     guid: 9a66480d90312cf42a593ecb5b2abb57
   - enabled: 1
+    path: Assets/Scenes/RiddleScene.unity
+    guid: 5ff035916cd22184591827ec84bc3b69
+  - enabled: 1
     path: Assets/Scenes/UI.unity
     guid: d98c19173e55af24eb2969c2c910d97d
   m_configObjects: {}
