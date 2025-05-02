@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Leather
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
   m_sharedMaterial: {fileID: 8126909604651319375, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stones
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
   m_sharedMaterial: {fileID: 8126909604651319375, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
@@ -1026,6 +1026,7 @@ GameObject:
   - component: {fileID: 1282004695}
   - component: {fileID: 1282004697}
   - component: {fileID: 1282004696}
+  - component: {fileID: 1282004698}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1072,7 +1073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What did ancient Egyptians use to write?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
   m_sharedMaterial: {fileID: 8126909604651319375, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
@@ -1149,6 +1150,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282004694}
   m_CullTransparentMesh: 1
+--- !u!114 &1282004698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282004694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df39d94c916764b98644a32384c61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: {fileID: 1282004696}
+  Answer1: {fileID: 0}
+  Answer2: {fileID: 0}
+  Answer3: {fileID: 0}
+  Answer4: {fileID: 0}
+  questionImage: {fileID: 0}
+  backgroundImage: {fileID: 0}
 --- !u!1 &1336499529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wood
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
   m_sharedMaterial: {fileID: 8126909604651319375, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
@@ -1756,6 +1776,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716345336}
   m_CullTransparentMesh: 1
+--- !u!1 &1934052683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934052685}
+  - component: {fileID: 1934052686}
+  m_Layer: 0
+  m_Name: RiddleLoadingmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934052685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934052683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.716835, y: 1.437531, z: -37.724213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934052686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934052683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df39d94c916764b98644a32384c61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: {fileID: 1282004696}
+  Answer1: {fileID: 1491526254}
+  Answer2: {fileID: 1987356292}
+  Answer3: {fileID: 1186859620}
+  Answer4: {fileID: 696190928}
+  questionImage: {fileID: 1716345338}
+  backgroundImage: {fileID: 1336499531}
 --- !u!1 &1987356290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,7 +1884,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Papyrus
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
   m_sharedMaterial: {fileID: 8126909604651319375, guid: 5f5361f0d60d50f41a288b0a3ce0bdc2, type: 2}
@@ -1988,3 +2059,4 @@ SceneRoots:
   - {fileID: 1639167455}
   - {fileID: 1219063315}
   - {fileID: 1115749564}
+  - {fileID: 1934052685}
