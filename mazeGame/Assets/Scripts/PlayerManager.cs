@@ -52,7 +52,7 @@ public class PlayerManager : MonoBehaviour
             SavePlayerData(); // create default
         }
 
-        UIManager.Instance?.UpdateAllUI(playerData.coins, playerData.lives, playerData.keys, playerData.timeBoosts);
+       // UIManager.Instance?.UpdateAllUI(playerData.coins, playerData.lives, playerData.keys, playerData.timeBoosts);
     }
 
     public bool SpendCoins(int amount)
@@ -65,7 +65,7 @@ public class PlayerManager : MonoBehaviour
             SavePlayerData();
 
             // حدث الواجهة
-            UIManager.Instance?.UpdateCoins(playerData.coins);
+           // UIManager.Instance?.UpdateCoins(playerData.coins);
 
             return true;
         }
@@ -78,20 +78,20 @@ public class PlayerManager : MonoBehaviour
     {
         playerData.lives++;
         SavePlayerData();
-        UIManager.Instance?.UpdateLives(playerData.lives);
+       // UIManager.Instance?.UpdateLives(playerData.lives);
     }
 
     public void AddKey()
     {
         playerData.keys++;
         SavePlayerData();
-        UIManager.Instance?.UpdateKeys(playerData.keys);
+        //UIManager.Instance?.UpdateKeys(playerData.keys);
     }
 
     public void AddTimeBoost()
     {
         playerData.timeBoosts++;
         SavePlayerData();
-        UIManager.Instance?.UpdateTimeBoosts(playerData.timeBoosts);
+        //UIManager.Instance?.UpdateTimeBoosts(playerData.timeBoosts);
     }
 }

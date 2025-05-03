@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class PlayerReturnPosition : MonoBehaviour
+{
+    void Start()
+    {
+
+        Debug.Log("DatatoBeShared.ReturnPosition: " + DatatoBeShared.ReturnPosition);
+
+        // ·Ê ›Ì „ﬂ«‰ ”«»ﬁ „ ”Ã·
+        if (DatatoBeShared.ReturnPosition != Vector3.zero)
+        {
+            Debug.Log("playerPosition: " + DatatoBeShared.ReturnPosition);
+
+            // —Ã¯⁄ «··«⁄» ··„Êﬁ⁄ «·ﬁœÌ„
+            transform.position = DatatoBeShared.ReturnPosition;
+
+            // ’›— «·ﬁÌ„… ⁄·‘«‰ „«   ﬂ—— «·„—… «·Ã«Ì…
+            DatatoBeShared.ReturnPosition = Vector3.zero;
+        }
+    }
+}

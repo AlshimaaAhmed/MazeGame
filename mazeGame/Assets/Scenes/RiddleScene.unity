@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83631571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 730334648}
+        m_TargetAssemblyTypeName: RiddleAnswerChecker, Assembly-CSharp
+        m_MethodName: OnAnswerClicked
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Answer2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &83631571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +429,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 669287626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 730334648}
+        m_TargetAssemblyTypeName: RiddleAnswerChecker, Assembly-CSharp
+        m_MethodName: OnAnswerClicked
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Answer3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &669287626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +614,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696190926}
   m_CullTransparentMesh: 1
+--- !u!1 &730334647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730334649}
+  - component: {fileID: 730334648}
+  m_Layer: 0
+  m_Name: RiddleAnswerChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &730334648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730334647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a47eac96522e3247bebc7e848196a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  returnSceneName: Level 1
+--- !u!4 &730334649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730334647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.475303, y: 479.90732, z: -111.16404}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &810315435
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +741,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 810315438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 730334648}
+        m_TargetAssemblyTypeName: RiddleAnswerChecker, Assembly-CSharp
+        m_MethodName: OnAnswerClicked
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Answer1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &810315438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,7 +1407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1413797846}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 730334648}
+        m_TargetAssemblyTypeName: RiddleAnswerChecker, Assembly-CSharp
+        m_MethodName: OnAnswerClicked
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Answer4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1413797846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,3 +2153,4 @@ SceneRoots:
   - {fileID: 1219063315}
   - {fileID: 1115749564}
   - {fileID: 1934052685}
+  - {fileID: 730334649}

@@ -11,7 +11,9 @@ public class DatatoBeShared
     public static string Answer4;
     public static Sprite Backgroundimg;
     public static Sprite Questionimg;
+    public static string CorrectAnswer;
 
+    public static Vector3 ReturnPosition;
 
 }
 
