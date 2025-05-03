@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using System.IO;
-
 
 public class UIManager : MonoBehaviour
 {
@@ -13,73 +11,42 @@ public class UIManager : MonoBehaviour
 
     [Header("UI Elements")]
     public Image[] heartIcons;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
-
-    public Image[] keyIcons;
-    public Sprite activeKey;
-    public Sprite inactiveKey;
-
-    public TMP_Text coinText;
-    public TMP_Text timerText;
-    public TMP_Text timeBoostsText;
-
-    public GameObject gameOverPanel;
-
-    private int maxHearts = 5;
     private int currentHearts;
-    private int coins = 0;
-    private int keys = 0;
-    private int timeBoosts = 0;
-    private float timer = 300f;
 
-    private float refillTimer = 0f;
-    private float refillInterval = 60f;
-
-    [Header("Level Detection")]
-    public bool isInLevel = false;
+    [Header("Key UI")]
+    public Image[] keyIcons;
+    public Sprite activeKey;   // «·„› «Õ «·„› ÊÕ
+    public Sprite inactiveKey; // «·„› «Õ «·√”Êœ
+    private int currentKeys = 0;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
     {
-        currentHearts = maxHearts;
-        UpdateHearts();
-        UpdateCoins(coins);
-        UpdateKeys(keys);
-        UpdateTimer();
-        UpdateTimeBoosts(timeBoosts);
+        currentHearts = heartIcons.Length;
+        for (int i = 0; i < heartIcons.Length; i++)
+        {
+            heartIcons[i].gameObject.SetActive(true);
+        }
+
+        UpdateKeyIcons();
     }
 
     void Update()
     {
-        if (isInLevel && currentHearts > 0)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                timer = 0;
-                GameOver();
-            }
-            UpdateTimer();
-        }
-
-        if (!isInLevel && currentHearts < maxHearts)
-        {
-            refillTimer += Time.deltaTime;
-            if (refillTimer >= refillInterval)
-            {
-                currentHearts++;
-                if (currentHearts > maxHearts) currentHearts = maxHearts;
-                refillTimer = 0f;
-                UpdateHearts();
-                Debug.Log("1 ‚ù§Ô∏è Refilled!");
-            }
-        }
+        if (Input.GetKeyDown(KeyCode.H)) TakeDamage(1);
+        if (Input.GetKeyDown(KeyCode.K)) AddKey();
     }
 
     public void TakeDamage(int damage)
@@ -87,93 +54,38 @@ public class UIManager : MonoBehaviour
         currentHearts -= damage;
         if (currentHearts < 0) currentHearts = 0;
         UpdateHearts();
-
-        if (currentHearts == 0)
-        {
-            GameOver();
-        }
-    }
-
-    public void AddHeart(int amount)
-    {
-        currentHearts += amount;
-        if (currentHearts > maxHearts) currentHearts = maxHearts;
-        UpdateHearts();
-    }
-
-    public void UpdateLives(int lives)
-    {
-        currentHearts = lives;
-        if (currentHearts > maxHearts) currentHearts = maxHearts;
-        UpdateHearts();
     }
 
     void UpdateHearts()
     {
         for (int i = 0; i < heartIcons.Length; i++)
         {
-            heartIcons[i].sprite = i < currentHearts ? fullHeart : emptyHeart;
+            heartIcons[i].gameObject.SetActive(i < currentHearts);
         }
     }
 
-    public void UpdateCoins(int amount)
+    public void AddKey()
     {
-        coins = amount;
-        if (coinText != null)
-            coinText.text = coins.ToString();
+        if (currentKeys < keyIcons.Length)
+        {
+            keyIcons[currentKeys].sprite = activeKey;
+            currentKeys++;
+        }
+
+        UpdateKeyIcons();
     }
 
-    public void UpdateKeys(int amount)
+    public void ResetKeys()
     {
-        keys = amount;
+        currentKeys = 0;
+        UpdateKeyIcons();
+    }
+
+    private void UpdateKeyIcons()
+    {
         for (int i = 0; i < keyIcons.Length; i++)
         {
-            keyIcons[i].sprite = i < keys ? activeKey : inactiveKey;
+            keyIcons[i].sprite = i < currentKeys ? activeKey : inactiveKey;
         }
-    }
-
-    public void UpdateTimeBoosts(int count)
-    {
-        timeBoosts = count;
-        if (timeBoostsText != null)
-            timeBoostsText.text = "‚è± x" + count.ToString();
-    }
-
-    void UpdateTimer()
-    {
-        int minutes = Mathf.FloorToInt(timer / 60);
-        int seconds = Mathf.FloorToInt(timer % 60);
-        timerText.text = $"{minutes:00}:{seconds:00}";
-    }
-    
-     public void BackToMenu()
-    {
-        SceneManager.LoadScene("MainMenuScene");
-    }
-    public void OpenShop()
-    {
-        SceneManager.LoadScene("Shop");
-    }
-    /*
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
-    }*/
-
-
-    void GameOver()
-    {
-        Debug.Log("Game Over!");
-        gameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void UpdateAllUI(int newCoins, int newLives, int newKeys, int newBoosts)
-    {
-        UpdateCoins(newCoins);
-        UpdateLives(newLives);
-        UpdateKeys(newKeys);
-        UpdateTimeBoosts(newBoosts);
     }
 }

@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 552923656}
   - component: {fileID: 552923655}
   - component: {fileID: 552923654}
+  - component: {fileID: 552923658}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -469,7 +470,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -501,6 +502,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &552923658
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552923653}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &677210200
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.630249, y: -9.0525}
+  m_AnchoredPosition: {x: 25.630371, y: -9.0525}
   m_SizeDelta: {x: 297.049, y: 127.8539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677210202

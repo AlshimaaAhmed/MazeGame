@@ -32,6 +32,8 @@ public class PuzzleDoorTrigger : MonoBehaviour
     public Sprite QuestionSprite;
     public Sprite BackgroundSprite;
 
+    public Transform returnPoint;
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -48,16 +50,18 @@ public class PuzzleDoorTrigger : MonoBehaviour
                 DatatoBeShared.Answer4 = "Leather";
                 DatatoBeShared.Questionimg = QuestionSprite;
                 DatatoBeShared.Backgroundimg = BackgroundSprite;
+                DatatoBeShared.CorrectAnswer = "Answer2";
             }
             else if (doorName == "crowDoorPos")
             {
                 DatatoBeShared.Question = "Which god was associated with wisdom?";
                 DatatoBeShared.Answer1 = "Ra";
-                DatatoBeShared.Answer2 = "Thoth";
-                DatatoBeShared.Answer3 = "Horus";
+                DatatoBeShared.Answer2 = "Horus";
+                DatatoBeShared.Answer3 = "Thoth";
                 DatatoBeShared.Answer4 = "Seth";
                 DatatoBeShared.Questionimg = QuestionSprite;
                 DatatoBeShared.Backgroundimg = BackgroundSprite;
+                DatatoBeShared.CorrectAnswer = "Answer3";
             }
             else if (doorName == "lotusDoorPos")
             {
@@ -68,6 +72,7 @@ public class PuzzleDoorTrigger : MonoBehaviour
                 DatatoBeShared.Answer4 = "The Sphinx";
                 DatatoBeShared.Questionimg = QuestionSprite;
                 DatatoBeShared.Backgroundimg = BackgroundSprite;
+                DatatoBeShared.CorrectAnswer = "Answer4";
             }
 
             // »œ¡ Õ—ﬂ… «·»«»
@@ -77,6 +82,7 @@ public class PuzzleDoorTrigger : MonoBehaviour
 
     void Update()
     {
+        DatatoBeShared.ReturnPosition = returnPoint.position;
         if (doorOpened)
         {
             door.position = Vector3.MoveTowards(door.position, targetPosition, doorSpeed * Time.deltaTime);
@@ -85,13 +91,13 @@ public class PuzzleDoorTrigger : MonoBehaviour
             {
                 doorOpened = false;
                 MovePlayerForward();
+               
             }
         }
 
         if (playerMoving)
         {
             player.position = Vector3.MoveTowards(player.position, playerTargetPosition, playerMoveSpeed * Time.deltaTime);
-
             if (Vector3.Distance(player.position, playerTargetPosition) < 0.01f)
             {
                 playerMoving = false;
@@ -115,10 +121,14 @@ public class PuzzleDoorTrigger : MonoBehaviour
     {
         playerTargetPosition = player.position + player.forward * playerMoveDistance;
         playerMoving = true;
+       
     }
 
     void StartPlayerSink()
     {
+        DatatoBeShared.ReturnPosition = player.position + player.forward * playerMoveDistance;
+
+
         sinkTargetPosition = player.position + new Vector3(0, -sinkDepth, 0);
         playerSinking = true;
 
