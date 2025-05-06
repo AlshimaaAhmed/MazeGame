@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -9,15 +7,22 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    [Header("UI Elements")]
     public Image[] heartIcons;
-    private int currentHearts;
-
-    [Header("Key UI")]
     public Image[] keyIcons;
-    public Sprite activeKey;   // ÇáãÝÊÇÍ ÇáãÝÊæÍ
-    public Sprite inactiveKey; // ÇáãÝÊÇÍ ÇáÃÓæÏ
+    public Sprite activeKey;
+    public Sprite inactiveKey;
+
+    private int currentHearts;
     private int currentKeys = 0;
+    private int currentCoins = 0;
+
+    public float startTime = 60f;
+    private float currentTime;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI coinsText; // ðŸ‘ˆ Ø¹Ø±Ø¶ Ø§Ù„ÙƒÙˆÙŠÙ†Ø²
+
+    public string gameOverScene = "GameOver";
+    public string levelUpScene = "Leveling up";
 
     private void Awake()
     {
@@ -25,6 +30,7 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -32,60 +38,110 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameOver" || scene.name == "MainMenuScene" || scene.name == "Leveling up")
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
+    }
+
     void Start()
     {
-        currentHearts = heartIcons.Length;
-        for (int i = 0; i < heartIcons.Length; i++)
+        Debug.Log(Application.persistentDataPath);
+
+        if (PlayerManager.Instance != null)
         {
-            heartIcons[i].gameObject.SetActive(true);
+            currentHearts = PlayerManager.Instance.playerData.lives;
+            currentKeys = PlayerManager.Instance.playerData.keys;
+            currentCoins = PlayerManager.Instance.playerData.coins;
+            UpdateUI();
         }
 
-        UpdateKeyIcons();
+        currentTime = startTime;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)) TakeDamage(1);
-        if (Input.GetKeyDown(KeyCode.K)) AddKey();
+        if (currentHearts > 0)
+        {
+            UpdateTimer();
+        }
     }
 
-    public void TakeDamage(int damage)
+    public void UpdateLives(int lives)
     {
-        currentHearts -= damage;
-        if (currentHearts < 0) currentHearts = 0;
-        UpdateHearts();
-    }
+        currentHearts = lives;
 
-    void UpdateHearts()
-    {
         for (int i = 0; i < heartIcons.Length; i++)
         {
-            heartIcons[i].gameObject.SetActive(i < currentHearts);
+            heartIcons[i].enabled = (i < currentHearts);
         }
-    }
 
-    public void AddKey()
-    {
-        if (currentKeys < keyIcons.Length)
+        if (currentHearts <= 0)
         {
-            keyIcons[currentKeys].sprite = activeKey;
-            currentKeys++;
+            GameOver();
         }
-
-        UpdateKeyIcons();
     }
 
-    public void ResetKeys()
+    public void UpdateKeys(int keys)
     {
-        currentKeys = 0;
-        UpdateKeyIcons();
-    }
+        currentKeys = keys;
 
-    private void UpdateKeyIcons()
-    {
         for (int i = 0; i < keyIcons.Length; i++)
         {
-            keyIcons[i].sprite = i < currentKeys ? activeKey : inactiveKey;
+            keyIcons[i].sprite = (i < currentKeys) ? activeKey : inactiveKey;
         }
+    }
+
+    public void UpdateCoins(int coins)
+    {
+        currentCoins = coins;
+        if (coinsText != null)
+        {
+            coinsText.text = coins.ToString();
+        }
+    }
+
+    private void UpdateUI()
+    {
+        UpdateLives(currentHearts);
+        UpdateKeys(currentKeys);
+        UpdateCoins(currentCoins);
+    }
+
+    private void UpdateTimer()
+    {
+        currentTime -= Time.deltaTime;
+
+        int minutes = Mathf.FloorToInt(currentTime / 60f);
+        int seconds = Mathf.FloorToInt(currentTime % 60f);
+
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        if (currentTime <= 10f)
+        {
+            timerText.color = Color.red;
+        }
+
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f;
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene(gameOverScene);
     }
 }

@@ -1,22 +1,10 @@
-using UnityEngine;
-using System.IO;
-using System.Collections.Generic;
-
-[System.Serializable]
-public class PlayerData
-{
-    public int coins = 0;
-    public int lives = 0;
-    public int keys = 0;
-    public int timeBoosts = 0;
-}
+﻿using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
-    public PlayerData playerData = new PlayerData();
 
-    private string filePath;
+    public PlayerData playerData;
 
     private void Awake()
     {
@@ -24,74 +12,54 @@ public class PlayerManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            playerData = PlayerData.LoadData();
+
+            Debug.Log($"🔑 Loaded Keys: {playerData.keys}");
+            Debug.Log($"💰 Loaded Coins: {playerData.coins}");
+            Debug.Log($"❤️ Loaded Lives: {playerData.lives}");
         }
         else
         {
             Destroy(gameObject);
         }
-
-        filePath = Path.Combine(Application.streamingAssetsPath, "player_data.json");
-        LoadPlayerData();
     }
 
-    public void SavePlayerData()
+    public void TakeDamage(int damage)
     {
-        string json = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(filePath, json);
-    }
-
-    public void LoadPlayerData()
-    {
-        if (File.Exists(filePath))
+        playerData.lives -= damage;
+        if (playerData.lives < 0)
         {
-            string json = File.ReadAllText(filePath);
-            playerData = JsonUtility.FromJson<PlayerData>(json);
-        }
-        else
-        {
-            SavePlayerData(); // create default
+            playerData.lives = 0;
         }
 
-       // UIManager.Instance?.UpdateAllUI(playerData.coins, playerData.lives, playerData.keys, playerData.timeBoosts);
-    }
+        PlayerData.SaveData(playerData);
 
-    public bool SpendCoins(int amount)
-    {
-        if (playerData.coins >= amount)
+        if (UIManager.Instance != null)
         {
-            playerData.coins -= amount;
-
-            // احفظ بعد الخصم فقط
-            SavePlayerData();
-
-            // حدث الواجهة
-           // UIManager.Instance?.UpdateCoins(playerData.coins);
-
-            return true;
+            UIManager.Instance.UpdateLives(playerData.lives);
         }
-
-        Debug.Log("Not enough coins!");
-        return false;
-    }
-
-    public void AddLife()
-    {
-        playerData.lives++;
-        SavePlayerData();
-       // UIManager.Instance?.UpdateLives(playerData.lives);
     }
 
     public void AddKey()
     {
         playerData.keys++;
-        SavePlayerData();
-        //UIManager.Instance?.UpdateKeys(playerData.keys);
+        PlayerData.SaveData(playerData);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateKeys(playerData.keys);
+        }
     }
 
-    public void AddTimeBoost()
+    public void AddCoins(int amount)
     {
-        playerData.timeBoosts++;
-        SavePlayerData();
-        //UIManager.Instance?.UpdateTimeBoosts(playerData.timeBoosts);
+        playerData.coins += amount;
+        PlayerData.SaveData(playerData);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateCoins(playerData.coins);
+        }
     }
 }

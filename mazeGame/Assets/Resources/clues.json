@@ -1,0 +1,63 @@
+[
+    {
+        "characterName": "Cleopatra1",
+        "clue": "Cats were sacred in ancient Egypt, protectors of homes and symbols of grace."
+    },
+    {
+        "characterName": "Cleopatra2",
+        "clue": "The Lotus blooms from the mud, a sign of resurrection and purity."
+    },
+    {
+        "characterName": "Cleopatra3",
+        "clue": "Crows have long been seen as omens of misfortune in many cultures."
+    },    {
+        "characterName": "Clue1Npc",
+        "clue": "The vulture circles where death lies... not a good sign."
+    },    {
+        "characterName": "Clue2Npc",
+        "clue": "The Ankh is the key of life, a guiding symbol among the ancients."
+    },    {
+        "characterName": "Clue3Npc",
+        "clue": "A broken mirror brings seven years of bad luck - best steer clear."
+    },    {
+        "characterName": "Clue4Trigger",
+        "clue": "Scarab beetles symbolized rebirth and protection in tombs and temples."
+    },    {
+        "characterName": "Clue5Npc",
+        "clue": "The Eye of Horus watches over, symbol of health and protection."
+    },    
+    {
+        "characterName": "Clue6Trigger",
+        "clue": "Even the mightiest symbols, when broken, bring ruin."
+    },{
+        "characterName": "L3Clue2Trigger",
+        "clue": "Cursed sand once turned red with blood - not all that glitters guides the way."
+    },{
+        "characterName": "L3Clue1Npc",
+        "clue": "Some say shards of glass reflect your misfortune - better not look too closely."
+    },{
+        "characterName": "L3Clue3Trigger",
+        "clue": "The Ankh is the key of life, a guiding symbol among the ancients."
+    },{
+        "characterName": "L3Clue4Npc",
+        "clue": "The Eye that never blinks sees what others cannot."
+    },{
+        "characterName": "L3Clue5Npc",
+        "clue": "Lotus flowers opened with the rising sun - a gentle blessing from the Nile."
+    },{
+        "characterName": "L3Clue6Npc",
+        "clue": "The beetle was believed to carry the sun across the sky, a sacred companion."
+    },{
+        "characterName": "L3Clue7Npc",
+        "clue": "A shattered monument can no longer protect only warn."
+    },{
+        "characterName": "L3Clue8Trigger",
+        "clue": "Where vultures gather, souls may be lost"
+    },{
+        "characterName": "L3Clue9Npc",
+        "clue": "Golden visages led the way through darkness, guiding spirits beyond."
+    },{
+        "characterName": "L3Clue10Npc",
+        "clue": ""
+    }
+]

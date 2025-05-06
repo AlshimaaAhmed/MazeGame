@@ -9,24 +9,22 @@ public class RiddleAnswerChecker : MonoBehaviour
     {
         if (selectedAnswer == DatatoBeShared.CorrectAnswer)
         {
-            if (UIManager.Instance != null)
+            if (PlayerManager.Instance != null)
             {
-                UIManager.Instance.AddKey();
+                PlayerManager.Instance.AddKey(); // إضافة مفتاح
             }
 
             Debug.Log("✅ Correct Answer - Key Added");
             SceneManager.LoadScene(returnSceneName);
-
         }
         else
         {
-            if (UIManager.Instance != null)
+            if (PlayerManager.Instance != null)
             {
-                UIManager.Instance.TakeDamage(1);
+                PlayerManager.Instance.TakeDamage(1); // خسارة قلب
             }
 
             Debug.Log("❌ Wrong Answer - Heart Removed");
         }
-
     }
 }
