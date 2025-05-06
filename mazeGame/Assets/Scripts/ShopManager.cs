@@ -60,25 +60,26 @@ public class ShopManager : MonoBehaviour
             Debug.LogWarning("Item not found: " + effect);
             return;
         }
+    }
 
         // نمنع الضغط المتكرر
-        isProcessing = true;
+      /**  isProcessing = true;
 
         if (PlayerManager.Instance.SpendCoins(item.cost))
         {
             switch (item.effect)
             {
                 case "heart":
-                    PlayerManager.Instance.AddLife();
+                    //PlayerManager.Instance.AddLife();
                     break;
                 case "key":
                     PlayerManager.Instance.AddKey();
                     break;
                 case "time30":
-                    PlayerManager.Instance.AddTimeBoost();
+                   // PlayerManager.Instance.AddTimeBoost();
                     break;
                 case "time60":
-                    PlayerManager.Instance.AddTimeBoost();
+                   // PlayerManager.Instance.AddTimeBoost();
                     break;
             }
 
@@ -90,7 +91,7 @@ public class ShopManager : MonoBehaviour
         }
 
         isProcessing = false;
-    }
+    }**/
 
 
     public void BackToMenu()

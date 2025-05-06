@@ -83,6 +83,7 @@ public class PuzzleDoorTrigger : MonoBehaviour
     void Update()
     {
         DatatoBeShared.ReturnPosition = returnPoint.position;
+
         if (doorOpened)
         {
             door.position = Vector3.MoveTowards(door.position, targetPosition, doorSpeed * Time.deltaTime);
@@ -91,7 +92,6 @@ public class PuzzleDoorTrigger : MonoBehaviour
             {
                 doorOpened = false;
                 MovePlayerForward();
-               
             }
         }
 
@@ -112,10 +112,13 @@ public class PuzzleDoorTrigger : MonoBehaviour
             if (Vector3.Distance(player.position, sinkTargetPosition) < 0.01f)
             {
                 playerSinking = false;
+                playerAnimator.SetTrigger("idle");
+
                 SceneManager.LoadScene(nextSceneName);
             }
         }
     }
+
 
     void MovePlayerForward()
     {
@@ -126,8 +129,6 @@ public class PuzzleDoorTrigger : MonoBehaviour
 
     void StartPlayerSink()
     {
-        DatatoBeShared.ReturnPosition = player.position + player.forward * playerMoveDistance;
-
 
         sinkTargetPosition = player.position + new Vector3(0, -sinkDepth, 0);
         playerSinking = true;
@@ -141,5 +142,6 @@ public class PuzzleDoorTrigger : MonoBehaviour
         {
             playerAnimator.SetTrigger("Sink");
         }
+
     }
 }

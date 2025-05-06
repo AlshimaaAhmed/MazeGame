@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Tile
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - ClueObject
   - Water
   - UI
-  - 
-  - 
+  - Wall
+  - 'Player '
   - 
   - 
   - 

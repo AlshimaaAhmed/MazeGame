@@ -1,22 +1,26 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class PlayerReturnPosition : MonoBehaviour
 {
     void Start()
     {
-
         Debug.Log("DatatoBeShared.ReturnPosition: " + DatatoBeShared.ReturnPosition);
 
-        // áæ İí ãßÇä ÓÇÈŞ ãÊÓÌá
         if (DatatoBeShared.ReturnPosition != Vector3.zero)
         {
             Debug.Log("playerPosition: " + DatatoBeShared.ReturnPosition);
 
-            // ÑÌøÚ ÇááÇÚÈ ááãæŞÚ ÇáŞÏíã
             transform.position = DatatoBeShared.ReturnPosition;
-
-            // ÕİÑ ÇáŞíãÉ ÚáÔÇä ãÇ ÊÊßÑÑ ÇáãÑÉ ÇáÌÇíÉ
             DatatoBeShared.ReturnPosition = Vector3.zero;
+
+            // âœ… Ø£ÙˆÙ‚Ù Ø§Ù„Ø£Ù†ÙŠÙ…ÙŠØ´Ù†
+            Animator animator = GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.ResetTrigger("Sink");
+               // animator.SetBool("isFalling", false); // Ù„Ùˆ Ø¨ØªØ³ØªØ®Ø¯Ù…Ù‡
+                animator.Play("Idle"); // Ø£Ùˆ Ø£ÙŠ Ø§Ø³Ù… Animation Ø¹Ø§ÙŠØ² ØªØ¨Ø¯Ø£ Ø¨ÙŠÙ‡
+            }
         }
     }
 }
