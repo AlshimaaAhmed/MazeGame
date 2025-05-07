@@ -15,14 +15,21 @@ public class UIManager : MonoBehaviour
     private int currentHearts;
     private int currentKeys = 0;
     private int currentCoins = 0;
+    private int currenttboost = 0;
 
     public float startTime = 60f;
     private float currentTime;
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI coinsText; // 👈 عرض الكوينز
+    public TextMeshProUGUI coinsText;
+    public Button timeBoostButton;
+    public TextMeshProUGUI boostButtonText;
+    public Button shopButton;
 
     public string gameOverScene = "GameOver";
     public string levelUpScene = "Leveling up";
+    Color customColor;
+
+    public CanvasGroup canvasGroup;
 
     private void Awake()
     {
@@ -36,6 +43,8 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
     private void OnDestroy()
@@ -45,25 +54,40 @@ public class UIManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "GameOver" || scene.name == "MainMenuScene" || scene.name == "Leveling up")
+        if (scene.name == "GameOver" || scene.name == "MainMenuScene" || scene.name == "Leveling up" || scene.name == "Shop")
         {
             gameObject.SetActive(false);
         }
         else
         {
             gameObject.SetActive(true);
+
+            if (canvasGroup != null)
+            {
+                if (scene.name == "RiddleScene")
+                {
+                    canvasGroup.blocksRaycasts = false;
+                }
+                else
+                {
+                    canvasGroup.blocksRaycasts = true;
+                }
+            }
         }
     }
 
     void Start()
     {
         Debug.Log(Application.persistentDataPath);
+        shopButton.interactable = true;
+        shopButton.onClick.AddListener(OpenShop);
 
         if (PlayerManager.Instance != null)
         {
             currentHearts = PlayerManager.Instance.playerData.lives;
             currentKeys = PlayerManager.Instance.playerData.keys;
             currentCoins = PlayerManager.Instance.playerData.coins;
+            currenttboost = PlayerManager.Instance.playerData.timeBoosts;
             UpdateUI();
         }
 
@@ -117,10 +141,15 @@ public class UIManager : MonoBehaviour
         UpdateLives(currentHearts);
         UpdateKeys(currentKeys);
         UpdateCoins(currentCoins);
+        UpdateTimeBoostButton(currenttboost);
     }
 
     private void UpdateTimer()
     {
+        if (ColorUtility.TryParseHtmlString("#5C421C", out customColor))
+        {
+            timerText.color = customColor;
+        }
         currentTime -= Time.deltaTime;
 
         int minutes = Mathf.FloorToInt(currentTime / 60f);
@@ -140,8 +169,41 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void UpdateTimeBoostButton(int boostCount)
+    {
+        if (boostButtonText != null)
+        {
+            boostButtonText.text = boostCount.ToString();
+        }
+
+        if (timeBoostButton != null)
+        {
+            timeBoostButton.interactable = boostCount > 0;
+        }
+    }
+
     private void GameOver()
     {
         SceneManager.LoadScene(gameOverScene);
+    }
+
+    public void AddTime(float seconds)
+    {
+        startTime += seconds;
+        currentTime += seconds;
+    }
+
+    public void OpenShop()
+    {
+        DatatoBeShared.LastScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("shop");
+    }
+
+    public void UseTimeBoost()
+    {
+        if (!PlayerManager.Instance.UseTimeBoost())
+        {
+            Debug.Log("❌ No time boosts available.");
+        }
     }
 }

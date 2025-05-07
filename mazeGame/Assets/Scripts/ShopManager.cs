@@ -8,7 +8,8 @@ public class ShopItem
 {
     public string name;
     public int cost;
-    public string effect; // "heart", "key", "time30", "time60"
+    public string effect;
+    // "heart", "key", "time30", "time60"
 }
 
 [System.Serializable]
@@ -20,6 +21,8 @@ public class ShopData
 public class ShopManager : MonoBehaviour
 {
     private List<ShopItem> shopItems;
+    public AudioSource purchaseAudioSource;
+
 
     private void Start()
     {
@@ -60,26 +63,29 @@ public class ShopManager : MonoBehaviour
             Debug.LogWarning("Item not found: " + effect);
             return;
         }
-    }
 
-        // نمنع الضغط المتكرر
-      /**  isProcessing = true;
+        isProcessing = true;
+
 
         if (PlayerManager.Instance.SpendCoins(item.cost))
         {
+            if (purchaseAudioSource != null)
+            {
+                purchaseAudioSource.Play();
+            }
             switch (item.effect)
             {
                 case "heart":
-                    //PlayerManager.Instance.AddLife();
+                    PlayerManager.Instance.AddLife();
                     break;
                 case "key":
                     PlayerManager.Instance.AddKey();
                     break;
                 case "time30":
-                   // PlayerManager.Instance.AddTimeBoost();
+                    PlayerManager.Instance.AddTimeBoost(1);
                     break;
                 case "time60":
-                   // PlayerManager.Instance.AddTimeBoost();
+                    PlayerManager.Instance.AddTimeBoost(2);
                     break;
             }
 
@@ -91,11 +97,12 @@ public class ShopManager : MonoBehaviour
         }
 
         isProcessing = false;
-    }**/
+    }
+
 
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene(DatatoBeShared.LastScene);
     }
 }

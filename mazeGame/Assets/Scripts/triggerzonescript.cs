@@ -2,26 +2,52 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    public Transform door;          // «”Õ» «·»«» Â‰« „‰ «·‹ Inspector
-    public Vector3 targetPosition;  // «·Ê÷⁄ «··Ì ÂÌ‰“· ·Â «·»«»
+    public Transform door;                  
+    public Vector3 doorOpenPosition;       
     public float speed = 2f;
 
-    private bool shouldMove = false;
+    public Transform player;               
 
+    private bool shouldMoveDoor = false;
+    private bool doorOpened = false;
+   
+
+    public AudioSource doorOpenSound;       
+    public AudioSource fallSound;           
+
+    public Animator playerAnimator;         
+    public string fallAnimationTrigger = "fall"; 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // « √ﬂœ ≈‰ «·ﬂ«—ﬂ — ·ÌÂ tag = Player
+        if (other.CompareTag("Player"))
         {
-            shouldMove = true;
+            shouldMoveDoor = true;
+
+            if (doorOpenSound != null)
+                doorOpenSound.Play();
+
+            if (playerAnimator != null)
+                playerAnimator.SetTrigger("Sink");
+
+            if (fallSound != null)
+                fallSound.Play();
+
+            PlayerManager.Instance.TakeDamage(1);
         }
     }
 
     void Update()
     {
-        if (shouldMove)
+        if (shouldMoveDoor && !doorOpened)
         {
-            // Õ—ﬂ «·»«» · Õ   œ—ÌÃÌ«
-            door.position = Vector3.MoveTowards(door.position, targetPosition, speed * Time.deltaTime);
+            door.position = Vector3.MoveTowards(door.position, doorOpenPosition, speed * Time.deltaTime);
+
+            if (Vector3.Distance(door.position, doorOpenPosition) < 0.01f)
+            {
+                doorOpened = true;
+
+            }
         }
+
     }
 }

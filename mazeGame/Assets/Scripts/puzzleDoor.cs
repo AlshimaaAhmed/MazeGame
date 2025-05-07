@@ -1,5 +1,6 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PuzzleDoorTrigger : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PuzzleDoorTrigger : MonoBehaviour
     public float sinkSpeed = 1f;
 
     public AudioSource sinkSound;
+    public AudioSource doorOpenSound; // ÿ•ÿ∂ÿßŸÅÿ© ÿµŸàÿ™ ŸÅÿ™ÿ≠ ÿßŸÑÿ®ÿßÿ®
 
     public string nextSceneName = "RiddleScene";
 
@@ -26,14 +28,65 @@ public class PuzzleDoorTrigger : MonoBehaviour
     private Vector3 sinkTargetPosition;
     public Animator playerAnimator;
 
-    public string doorName;  // «”„ «·»«» «··Ì Â‰Õÿ ›ÌÂ «·”ﬂ—Ì» 
+    private string doorName;
 
-    // «·’Ê— «·Œ«’… »ﬂ· »«»
     public Sprite QuestionSprite;
     public Sprite BackgroundSprite;
 
     public Transform returnPoint;
 
+    [System.Serializable]
+    public class QuestionData
+    {
+        public string question;
+        public string[] answers;
+        public string correctAnswer;
+    }
+
+    [System.Serializable]
+    public class DoorQuestionEntry
+    {
+        public string doorName;
+        public QuestionData questionData;
+    }
+
+    [System.Serializable]
+    public class DoorQuestions
+    {
+        public List<DoorQuestionEntry> doors;
+    }
+
+    private List<DoorQuestionEntry> questionList;
+
+    void Start()
+    {
+        if (door != null)
+        {
+            doorName = door.gameObject.name;
+            Debug.Log("Door name set to: " + doorName);
+        }
+        else
+        {
+            Debug.LogWarning("Door reference is not assigned!");
+        }
+
+        LoadQuestions();
+    }
+
+    void LoadQuestions()
+    {
+        TextAsset jsonText = Resources.Load<TextAsset>("questions");
+        if (jsonText != null)
+        {
+            string json = jsonText.text;
+            DoorQuestions doorQuestions = JsonUtility.FromJson<DoorQuestions>(json);
+            questionList = doorQuestions.doors;
+        }
+        else
+        {
+            Debug.LogError("JSON file not found in Resources!");
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -41,49 +94,37 @@ public class PuzzleDoorTrigger : MonoBehaviour
         {
             doorOpened = true;
 
-            if (doorName == "catDoorPos")
+            // ÿ™ÿ¥ÿ∫ŸäŸÑ ÿµŸàÿ™ ŸÅÿ™ÿ≠ ÿßŸÑÿ®ÿßÿ®
+            if (doorOpenSound != null)
+                doorOpenSound.Play();
+
+            if (questionList != null)
             {
-                DatatoBeShared.Question = "What did ancient Egyptians use to write?";
-                DatatoBeShared.Answer1 = "Wood";
-                DatatoBeShared.Answer2 = "Papyrus";
-                DatatoBeShared.Answer3 = "StonesStones";
-                DatatoBeShared.Answer4 = "Leather";
-                DatatoBeShared.Questionimg = QuestionSprite;
-                DatatoBeShared.Backgroundimg = BackgroundSprite;
-                DatatoBeShared.CorrectAnswer = "Answer2";
-            }
-            else if (doorName == "crowDoorPos")
-            {
-                DatatoBeShared.Question = "Which god was associated with wisdom?";
-                DatatoBeShared.Answer1 = "Ra";
-                DatatoBeShared.Answer2 = "Horus";
-                DatatoBeShared.Answer3 = "Thoth";
-                DatatoBeShared.Answer4 = "Seth";
-                DatatoBeShared.Questionimg = QuestionSprite;
-                DatatoBeShared.Backgroundimg = BackgroundSprite;
-                DatatoBeShared.CorrectAnswer = "Answer3";
-            }
-            else if (doorName == "lotusDoorPos")
-            {
-                DatatoBeShared.Question = "What structure guarded the pyramids?";
-                DatatoBeShared.Answer1 = "Scarab";
-                DatatoBeShared.Answer2 = "Obelisk";
-                DatatoBeShared.Answer3 = "Statue of Ra";
-                DatatoBeShared.Answer4 = "The Sphinx";
-                DatatoBeShared.Questionimg = QuestionSprite;
-                DatatoBeShared.Backgroundimg = BackgroundSprite;
-                DatatoBeShared.CorrectAnswer = "Answer4";
+                foreach (var entry in questionList)
+                {
+                    if (entry.doorName == doorName)
+                    {
+                        QuestionData q = entry.questionData;
+                        DatatoBeShared.Question = q.question;
+                        DatatoBeShared.Answer1 = q.answers[0];
+                        DatatoBeShared.Answer2 = q.answers[1];
+                        DatatoBeShared.Answer3 = q.answers[2];
+                        DatatoBeShared.Answer4 = q.answers[3];
+                        DatatoBeShared.CorrectAnswer = q.correctAnswer;
+                        DatatoBeShared.Questionimg = QuestionSprite;
+                        DatatoBeShared.Backgroundimg = BackgroundSprite;
+                        break;
+                    }
+                }
             }
 
-            // »œ¡ Õ—ﬂ… «·»«»
             door.position = Vector3.MoveTowards(door.position, targetPosition, doorSpeed * Time.deltaTime);
+            DatatoBeShared.ReturnPosition = returnPoint.position;
         }
     }
 
     void Update()
     {
-        DatatoBeShared.ReturnPosition = returnPoint.position;
-
         if (doorOpened)
         {
             door.position = Vector3.MoveTowards(door.position, targetPosition, doorSpeed * Time.deltaTime);
@@ -113,35 +154,26 @@ public class PuzzleDoorTrigger : MonoBehaviour
             {
                 playerSinking = false;
                 playerAnimator.SetTrigger("idle");
-
                 SceneManager.LoadScene(nextSceneName);
             }
         }
     }
 
-
     void MovePlayerForward()
     {
         playerTargetPosition = player.position + player.forward * playerMoveDistance;
         playerMoving = true;
-       
     }
 
     void StartPlayerSink()
     {
-
         sinkTargetPosition = player.position + new Vector3(0, -sinkDepth, 0);
         playerSinking = true;
 
         if (sinkSound != null)
-        {
             sinkSound.Play();
-        }
 
         if (playerAnimator != null)
-        {
             playerAnimator.SetTrigger("Sink");
-        }
-
     }
 }

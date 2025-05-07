@@ -14,6 +14,7 @@ public class DatatoBeShared
     public static string CorrectAnswer;
 
     public static Vector3 ReturnPosition;
+    public static string LastScene = "";
 
 }
 

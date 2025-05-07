@@ -1,0 +1,28 @@
+{
+    "doors": [
+        {
+            "doorName": "catDoorPos",
+            "questionData": {
+                "question": "What did ancient Egyptians use to write?",
+                "answers": [ "Wood", "Papyrus", "StonesStones", "Leather" ],
+                "correctAnswer": "Answer2"
+            }
+        },
+        {
+            "doorName": "crowDoorPos",
+            "questionData": {
+                "question": "Which god was associated with wisdom?",
+                "answers": [ "Ra", "Horus", "Thoth", "Seth" ],
+                "correctAnswer": "Answer3"
+            }
+        },
+        {
+            "doorName": "lotusDoorPos",
+            "questionData": {
+                "question": "What structure guarded the pyramids?",
+                "answers": [ "Scarab", "Obelisk", "Statue of Ra", "The Sphinx" ],
+                "correctAnswer": "Answer4"
+            }
+        }
+    ]
+}

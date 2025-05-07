@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+
     public void TakeDamage(int damage)
     {
         playerData.lives -= damage;
@@ -61,5 +62,58 @@ public class PlayerManager : MonoBehaviour
         {
             UIManager.Instance.UpdateCoins(playerData.coins);
         }
+        if (UIManagerShop.Instance != null)
+        {
+            UIManagerShop.Instance.UpdateCoinsShop(playerData.coins);
+        }
     }
+    public bool SpendCoins(int amount)
+    {
+        if (playerData.coins >= amount)
+        {
+            playerData.coins -= amount;
+            PlayerData.SaveData(playerData);
+            UIManager.Instance?.UpdateCoins(playerData.coins);
+            UIManagerShop.Instance.UpdateCoinsShop(playerData.coins);
+
+            return true;
+        }
+        return false;
+    }
+
+    public void AddLife()
+    {
+        playerData.lives++;
+        PlayerData.SaveData(playerData);
+        UIManager.Instance?.UpdateLives(playerData.lives);
+    }
+
+    public void AddTime(float extraSeconds)
+    {
+        UIManager.Instance?.AddTime(extraSeconds);
+    }
+
+    public void AddTimeBoost(int amount)
+    {
+        playerData.timeBoosts += amount;
+        PlayerData.SaveData(playerData);
+        UIManager.Instance?.UpdateTimeBoostButton(playerData.timeBoosts);
+        UIManagerShop.Instance?.UpdateTimeBoostButtonShop(playerData.timeBoosts);
+
+    }
+
+    public bool UseTimeBoost()
+    {
+        if (playerData.timeBoosts > 0)
+        {
+            playerData.timeBoosts--;
+            PlayerData.SaveData(playerData);
+            UIManager.Instance?.UpdateTimeBoostButton(playerData.timeBoosts);
+            UIManagerShop.Instance?.UpdateTimeBoostButtonShop(playerData.timeBoosts);
+            AddTime(30); 
+            return true;
+        }
+        return false;
+    }
+
 }

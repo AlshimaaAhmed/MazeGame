@@ -9,6 +9,7 @@ public class PlayerData
     public int coins = 0;
     public int lives = 5;
     public int keys = 0;
+    public int timeBoosts = 0;
     public List<string> collectedRewards = new List<string>();
 
     public static void SaveData(PlayerData playerData)

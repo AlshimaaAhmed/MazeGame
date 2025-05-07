@@ -1,14 +1,27 @@
-[
-  {
-    "itemName": "Extra Life",
-    "description": "Buy 1 extra life.",
-    "price": 50,
-    "type": "life"
-  },
-  {
-    "itemName": "+30 Seconds",
-    "description": "Add 30 seconds to the level timer.",
-    "price": 30,
-    "type": "time"
-  }
-]
+
+
+{
+  "items": [
+    {
+      "name": "Extra Heart",
+      "cost": 100,
+      "effect": "heart"
+    },
+    {
+      "name": "Golden Key",
+      "cost": 500,
+      "effect": "key"
+    },
+    {
+      "name": "Time Boost 30s",
+      "cost": 60,
+      "effect": "time30"
+    },
+    {
+      "name": "Time Boost 60s",
+      "cost": 100,
+      "effect": "time60"
+    }
+  ]
+}
+
