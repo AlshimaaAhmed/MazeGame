@@ -23,6 +23,90 @@
                 "answers": [ "Scarab", "Obelisk", "Statue of Ra", "The Sphinx" ],
                 "correctAnswer": "Answer4"
             }
+        },     {
+            "doorName": "HorusEyeDoor",
+            "questionData": {
+                "question": "Which god had a jackal head?",
+                "answers": [ "Anubis", "Ra", "Thoth", "Sobek"],
+                "correctAnswer": "Answer1"
+            }
+        },     {
+            "doorName": "VultureDoor",
+            "questionData": {
+                "question": "What was used to weigh the heart of the dead?",
+                "answers": ["Scroll", "Feather of Ma'at", "Ankh", "Coin"],
+                "correctAnswer": "Answer2"
+            }
+        },     {
+            "doorName": "AnkhDoor",
+            "questionData": {
+                "question": "Who was the sun god in ancient Egypt?",
+                "answers": ["Thoth", "Ra", "Anubis", "Osiris"],
+                "correctAnswer": "Answer2"
+            }
+        },     {
+            "doorName": "BrokenMirrorDoor",
+            "questionData": {
+                "question": "What did Egyptians believe the afterlife was called?",
+                "answers": ["Underworld", "Field of Reeds", "Valley of Kings", "Abyss"],
+                "correctAnswer": "Answer2"
+            }
+        },     {
+            "doorName": "CrackedObeliskDoor",
+            "questionData": {
+                "question": "Which river was essential to Egyptian civilization?",
+                "answers": [ "Amazon", "Tigris", "Nile", "Euphrates" ],
+                "correctAnswer": "Answer3"
+            }
+        },     {
+            "doorName": "ScarabDoor",
+            "questionData": {
+                "question": "Which plant symbolized rebirth?",
+                "answers": ["Palm", "Olive", "Lotus", "Papyrus"],
+                "correctAnswer": "Answer3"
+            }
+        },     {
+            "doorName": "RedSandDoor",
+            "questionData": {
+                "question": "Which symbol represents life in Egyptian mythology?",
+                "answers": ["Flame", "Feather", "Ankh", "Eye"],
+                "correctAnswer": "Answer4"
+            }
+        },     {
+            "doorName": "Ankh2Door",
+            "questionData": {
+                "question": "Which goddess protected the home and symbolized grace?",
+                "answers": ["Bastet", "Isis", "Hathor", "Sekhmet"],
+                "correctAnswer": "Answer1"
+            }
+        },     {
+            "doorName": "HorusEye2Door",
+            "questionData": {
+                "question": "Which animal was associated with the god Horus?",
+                "answers": ["Hawk", "Cat", "Crocodile", "Jackal"],
+                "correctAnswer": "Answer1"
+            }
+        },     {
+            "doorName": "Lotus2Door",
+            "questionData": {
+                "question": "What flower was a symbol of rebirth in ancient Egypt?",
+                "answers": ["Palm", "Lotus", "Olive", "Papyrus"],
+                "correctAnswer": "Answer2"
+            }
+        },     {
+            "doorName": "CrackedObelisk2Door",
+            "questionData": {
+                "question": "What god was responsible for mummification and the afterlife?",
+                "answers": ["Thoth", "Anubis", "Ra", "Osiris"],
+                "correctAnswer": "Answer1"
+            }
+        },     {
+            "doorName": "PharaohMaskDoor",
+            "questionData": {
+                "question": "What did the Pharaoh’s mask symbolize?",
+                "answers": ["War", "Mystery", "Power", "Wealth"],
+                "correctAnswer": "Answer3"
+            }
         }
     ]
 }

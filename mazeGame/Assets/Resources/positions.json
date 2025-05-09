@@ -1,0 +1,161 @@
+{
+    "doors": [
+        {
+            "doorName": "catDoorNig",
+            "position": {
+                "x": 4.7,
+                "y": -6.61,
+                "z": -51.2
+            }
+        },
+        {
+            "doorName": "crowDoorNig",
+            "position": {
+                "x": 28.9,
+                "y": -6.61,
+                "z": -18
+            }
+        },
+        {
+            "doorName": "lotusDoorNig",
+            "position": {
+                "x": -10,
+                "y": -6.61,
+                "z": 18.2
+            }
+        },        {
+            "doorName": "RedSandNig",
+            "position": {
+                "x": 25.1,
+                "y": 81.08,
+                "z": 440.1
+            }
+        },        {
+            "doorName": "RedSandNig(1)",
+            "position": {
+                "x": 17.4,
+                "y": 81.08,
+                "z": 497.7
+            }
+        },        {
+            "doorName": "Lotus2DoorNig",
+            "position": {
+                "x": 108.5,
+                "y": 81.08,
+                "z": 414.5
+            }
+        },        {
+            "doorName": "None1",
+            "position": {
+                "x": 166.6,
+                "y": 81.08,
+                "z": 399.9
+            }
+        },        {
+            "doorName": "None2",
+            "position": {
+                "x": 197.4,
+                "y": 81.08,
+                "z": 366.1
+            }
+        },        {
+            "doorName": "ScarabDoor",
+            "position": {
+                "x": 171.4,
+                "y": 81.08,
+                "z": 346.8
+            }
+        },        {
+            "doorName": "CrackedObelisk2DoorNig",
+            "position": {
+                "x": 65.7,
+                "y": 81.08,
+                "z": 314.2
+            }
+        },        {
+            "doorName": "VultureDoor3Nig",
+            "position": {
+                "x": 90.7,
+                "y": 81.08,
+                "z": 283.9
+            }
+        },        {
+            "doorName": "None3",
+            "position": {
+                "x": 57.1,
+                "y": 81.08,
+                "z": 268.1
+            }
+        },{
+            "doorName": "BrokenMirrorDoor3Nig",
+            "position": {
+                "x": 90.1,
+                "y": 81.08,
+                "z": 503.5
+            }
+        },{
+            "doorName": "Ankh2DoorNig",
+            "position": {
+                "x": 129.9,
+                "y": 81.08,
+                "z": 522.2
+            }
+        },{
+            "doorName": "Ankh2DoorNig(1)",
+            "position": {
+                 "x": 129.9,
+                "y": 81.08,
+                "z": 522.2
+            }
+        },{
+            "doorName": "PharaohMaskDoorNig",
+            "position": {
+                "x": 64.1,
+                "y": 81.08,
+                "z": 234.2
+            }
+        },{
+            "doorName": "AnkhDoorNig",
+            "position": {
+                "x": 6.6,
+                "y": 30.29,
+                "z": 67.7
+            }
+        },{
+            "doorName": "HorusEyeDoorNig",
+            "position": {
+                "x": 36.4,
+                "y": 30.29,
+                "z": 69.3
+            }
+        },{
+            "doorName": "VultureDoorNig",
+            "position": {
+                "x": 48.2,
+                "y": 30.29,
+                "z": 16.4
+            }
+        },{
+            "doorName": "BrokenMirrorDoorNig",
+            "position": {
+                "x": -17.1,
+                "y": 30.29,
+                "z": 36.5
+            }
+        },{
+            "doorName": "CrackedObeliskDoorNig",
+            "position": {
+                "x": -17.1,
+                "y": 30.29,
+                "z": 15.7
+            }
+        },{
+            "doorName": "ScarabDoorNig",
+            "position": {
+                "x": -42.6,
+                "y": 30.29,
+                "z": 70.4
+            }
+        }
+    ]
+}

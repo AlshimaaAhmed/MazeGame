@@ -62,6 +62,15 @@ public class PlayerMove : MonoBehaviour
                 footstepsAudio.Stop();
         }
     }
+    public void StopImmediately()
+    {
+        controller.Move(Vector3.zero); // Êﬁ› «·Õ—ﬂ… ›Ê—Ì«
+        if (animator != null)
+            animator.SetBool("isWalking", false);
+
+        if (footstepsAudio != null && footstepsAudio.isPlaying)
+            footstepsAudio.Stop();
+    }
 }
 // This script handles player movement, animation, and footstep sounds.
 // It uses Unity's CharacterController for smooth movement and includes basic input handling.

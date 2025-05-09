@@ -15,6 +15,9 @@ public class DatatoBeShared
 
     public static Vector3 ReturnPosition;
     public static string LastScene = "";
+    public static string ReturnScene = "";
+    public static HashSet<string> EnteredDoors = new HashSet<string>();
+    public static bool IsDoorOpen = false;
 
 }
 

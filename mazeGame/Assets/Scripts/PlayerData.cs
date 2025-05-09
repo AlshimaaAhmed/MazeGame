@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int currentLevel = 1;
+    public int currentLevel = 2;
     public int coins = 0;
     public int lives = 5;
     public int keys = 0;

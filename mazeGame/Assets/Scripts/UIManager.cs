@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     private int currentCoins = 0;
     private int currenttboost = 0;
 
-    public float startTime = 60f;
+    public float startTime = 10f;
     private float currentTime;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI coinsText;
@@ -78,20 +78,38 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Application.persistentDataPath);
-        shopButton.interactable = true;
-        shopButton.onClick.AddListener(OpenShop);
+       
+            Debug.Log(Application.persistentDataPath);
+            shopButton.interactable = true;
+            shopButton.onClick.AddListener(OpenShop);
 
-        if (PlayerManager.Instance != null)
-        {
-            currentHearts = PlayerManager.Instance.playerData.lives;
-            currentKeys = PlayerManager.Instance.playerData.keys;
-            currentCoins = PlayerManager.Instance.playerData.coins;
-            currenttboost = PlayerManager.Instance.playerData.timeBoosts;
-            UpdateUI();
-        }
+            if (PlayerManager.Instance != null)
+            {
+                currentHearts = PlayerManager.Instance.playerData.lives;
+                currentKeys = PlayerManager.Instance.playerData.keys;
+                currentCoins = PlayerManager.Instance.playerData.coins;
+                currenttboost = PlayerManager.Instance.playerData.timeBoosts;
+                UpdateUI();
+            }
 
-        currentTime = startTime;
+            // تحديد الوقت بناءً على اسم المشهد
+            string sceneName = SceneManager.GetActiveScene().name;
+
+            if (PlayerManager.Instance.playerData.currentLevel == 1)
+            {
+                startTime = 5 * 60f; // 5 دقائق
+            }
+            else if (PlayerManager.Instance.playerData.currentLevel == 2)
+            {
+                startTime = 10 * 60f; // 10 دقائق
+            }
+            else if (PlayerManager.Instance.playerData.currentLevel == 3)
+            {
+                startTime = 20 * 60f; // 20 دقيقة
+            }
+
+            currentTime = startTime;
+
     }
 
     void Update()

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PuzzleDoorTrigger : MonoBehaviour
 {
     public Transform door;
-    public Vector3 targetPosition;
+    private Vector3 targetPosition;
     public float doorSpeed = 2f;
 
     public Transform player;
@@ -16,7 +16,7 @@ public class PuzzleDoorTrigger : MonoBehaviour
     public float sinkSpeed = 1f;
 
     public AudioSource sinkSound;
-    public AudioSource doorOpenSound; // إضافة صوت فتح الباب
+    public AudioSource doorOpenSound;
 
     public string nextSceneName = "RiddleScene";
 
@@ -32,8 +32,6 @@ public class PuzzleDoorTrigger : MonoBehaviour
 
     public Sprite QuestionSprite;
     public Sprite BackgroundSprite;
-
-    public Transform returnPoint;
 
     [System.Serializable]
     public class QuestionData
@@ -57,13 +55,28 @@ public class PuzzleDoorTrigger : MonoBehaviour
     }
 
     private List<DoorQuestionEntry> questionList;
+    private CharacterController controller;
+
+    private PlayerMove playerMovementScript;
 
     void Start()
     {
+        controller = player.GetComponent<CharacterController>();
+        playerMovementScript = player.GetComponent<PlayerMove>();
+
+        targetPosition = new Vector3(door.position.x, door.position.y - 20f, door.position.z);
+
         if (door != null)
         {
             doorName = door.gameObject.name;
             Debug.Log("Door name set to: " + doorName);
+
+            if (DatatoBeShared.EnteredDoors.Contains(doorName))
+            {
+                GetComponent<Collider>().enabled = false;
+                this.enabled = false;
+                door.position = new Vector3(door.position.x, door.position.y - 20f, door.position.z);
+            }
         }
         else
         {
@@ -94,7 +107,10 @@ public class PuzzleDoorTrigger : MonoBehaviour
         {
             doorOpened = true;
 
-            // تشغيل صوت فتح الباب
+            DatatoBeShared.EnteredDoors.Add(doorName);
+            DatatoBeShared.ReturnPosition = player.position;
+            DatatoBeShared.ReturnScene = SceneManager.GetActiveScene().name;
+
             if (doorOpenSound != null)
                 doorOpenSound.Play();
 
@@ -118,8 +134,13 @@ public class PuzzleDoorTrigger : MonoBehaviour
                 }
             }
 
-            door.position = Vector3.MoveTowards(door.position, targetPosition, doorSpeed * Time.deltaTime);
-            DatatoBeShared.ReturnPosition = returnPoint.position;
+            if (playerMovementScript != null)
+            {
+                playerMovementScript.enabled = false;
+                playerMovementScript.StopImmediately();
+            }
+
+            GetComponent<Collider>().enabled = false;
         }
     }
 
@@ -131,29 +152,43 @@ public class PuzzleDoorTrigger : MonoBehaviour
 
             if (Vector3.Distance(door.position, targetPosition) < 0.01f)
             {
+                door.position = targetPosition;
                 doorOpened = false;
+
                 MovePlayerForward();
             }
         }
 
         if (playerMoving)
         {
-            player.position = Vector3.MoveTowards(player.position, playerTargetPosition, playerMoveSpeed * Time.deltaTime);
-            if (Vector3.Distance(player.position, playerTargetPosition) < 0.01f)
+            Vector3 direction = (playerTargetPosition - player.position).normalized;
+            controller.Move(direction * playerMoveSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(player.position, playerTargetPosition) < 0.05f)
             {
                 playerMoving = false;
+               
                 StartPlayerSink();
             }
         }
 
         if (playerSinking)
         {
-            player.position = Vector3.MoveTowards(player.position, sinkTargetPosition, sinkSpeed * Time.deltaTime);
+          
+            Vector3 direction = (sinkTargetPosition - player.position).normalized;
+            player.position += direction * sinkSpeed * Time.deltaTime;
 
-            if (Vector3.Distance(player.position, sinkTargetPosition) < 0.01f)
+            if (Vector3.Distance(player.position, sinkTargetPosition) < 0.05f)
             {
                 playerSinking = false;
-                playerAnimator.SetTrigger("idle");
+
+                if (playerAnimator != null)
+                    playerAnimator.SetTrigger("idle");
+
+                // Save the player's return position and the scene name for later
+           
+
+                // Transition to the next scene
                 SceneManager.LoadScene(nextSceneName);
             }
         }
@@ -169,6 +204,8 @@ public class PuzzleDoorTrigger : MonoBehaviour
     {
         sinkTargetPosition = player.position + new Vector3(0, -sinkDepth, 0);
         playerSinking = true;
+
+        controller.enabled = false;
 
         if (sinkSound != null)
             sinkSound.Play();

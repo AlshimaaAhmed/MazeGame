@@ -6,6 +6,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class ShopItem
 {
+
     public string name;
     public int cost;
     public string effect;
@@ -22,11 +23,13 @@ public class ShopManager : MonoBehaviour
 {
     private List<ShopItem> shopItems;
     public AudioSource purchaseAudioSource;
+    public GameObject MessagePanel;
 
 
     private void Start()
     {
         LoadShopItems();
+        MessagePanel.SetActive(false);
     }
 
     void LoadShopItems()
@@ -47,7 +50,7 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("shop_items.json not found!");
+          
         }
     }
 
@@ -93,7 +96,7 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough coins to buy: " + item.name);
+            MessagePanel.SetActive(true);
         }
 
         isProcessing = false;
@@ -104,5 +107,10 @@ public class ShopManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(DatatoBeShared.LastScene);
+    }
+
+    public void XPressing()
+    {
+        MessagePanel.SetActive(false);
     }
 }

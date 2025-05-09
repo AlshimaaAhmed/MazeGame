@@ -45,6 +45,10 @@ public class LevelUpManager : MonoBehaviour
             if (statueReward != null)
             {
                 statueReward.SetActive(true);
+                RewardRotation rot = statueReward.GetComponent<RewardRotation>();
+                if (rot != null)
+                    rot.StartRotation();
+
                 Debug.Log("✅ Statue reward activated");
 
                 PlayerManager.Instance.playerData.currentLevel++;
@@ -71,6 +75,11 @@ public class LevelUpManager : MonoBehaviour
             {
                 GoldenBox.SetActive(true);
                 Debug.Log("✅ Golden Box activated");
+                RewardRotation rot = GoldenBox.GetComponent<RewardRotation>();
+                if (rot != null)
+                    rot.StartRotation();
+
+                Debug.Log("✅ Statue reward activated");
 
                 PlayerManager.Instance.playerData.currentLevel++;
                 PlayerData.SaveData(PlayerManager.Instance.playerData);
